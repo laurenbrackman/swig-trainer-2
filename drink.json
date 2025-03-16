@@ -4,7 +4,7 @@
       "type": "Soda",
       "ingredients": {
         "base": "Dr. Pepper",
-        "top-off":"",
+        "topOff":"",
         "syrups": ["Vanilla"],
         "cream": "Coconut Cream",
         "fruits": [],
@@ -16,7 +16,7 @@
     "type": "Soda",
     "ingredients": {
       "base": "Dr. Pepper",
-      "top-off":"",
+      "topOff":"",
       "syrups": [],
       "cream": "Coconut Cream",
       "fruits": [],
@@ -28,7 +28,7 @@
 "type": "Soda",
 "ingredients": {
   "base": "Diet Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut"],
   "cream": "",
   "fruits": [],
@@ -40,7 +40,7 @@
 "type": "Soda",
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Vanilla"],
   "cream": "Coconut Cream",
   "fruits": [],
@@ -52,7 +52,7 @@
 "type": "Soda",
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut"],
   "cream": "",
   "fruits": [],
@@ -64,7 +64,7 @@
 "type": "Soda",
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut", "Peach"],
   "cream": "Half and Half",
   "fruits": [],
@@ -76,7 +76,7 @@
 "type": "Soda",
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Vanilla", "Peach"],
   "cream": "Half and Half",
   "fruits": [],
@@ -88,7 +88,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["English Toffee"],
   "cream": "Half and Half",
   "fruits": [],
@@ -100,7 +100,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Peach"],
   "cream": "Coconut Cream",
   "fruits": [],
@@ -112,7 +112,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Diet Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Coconut", "SF Vanilla"],
   "cream": "",
   "fruits": [],
@@ -124,7 +124,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Blackberry", "Coconut"],
   "cream": "Half and Half",
   "fruits": [],
@@ -136,7 +136,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cupcake"],
   "cream": "Vanilla Cream",
   "fruits": [],
@@ -148,7 +148,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Dr. Pepper",
-  "top-off":"",
+  "topOff":"",
   "syrups":["Coconut", "Vanilla"],
   "cream": "",
   "fruits": [],
@@ -160,7 +160,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Diet Coke",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut"],
   "cream": "",
   "fruits": ["Fresh Lime"],
@@ -172,7 +172,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Diet Coke",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Coconut"],
   "cream": "Coconut Cream",
   "fruits": ["Fresh Lime"],
@@ -183,9 +183,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Diet Coke",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cranberry"],
-  "cream": [],
+  "cream": "",
   "fruits": ["Fresh Lime"],
   "purees": [],
   "extras": []
@@ -194,9 +194,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Coke Zero",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pineapple"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": ["Fresh Lime"],
   "purees": ["Peach Puree"],
   "extras": []
@@ -205,9 +205,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Coke",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pineapple"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -216,9 +216,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Pepsi",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cherry", "Coconut"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -227,9 +227,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Peach", "Raspberry"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -238,9 +238,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": [],
-  "cream": [],
+  "cream":"",
   "fruits": [],
   "purees": ["Mango Puree", "Strawberry"],
   "extras": []
@@ -249,9 +249,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": [],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": ["Mango Puree", "Strawberry Puree"],
   "extras": []
@@ -260,9 +260,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pineapple"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": ["Fresh Lime"],
   "purees": ["Raspberry Puree"],
   "extras": []
@@ -271,9 +271,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pomegranate", "Grapefruit"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": [],
   "extras": []
@@ -282,9 +282,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Guava", "Strawberry"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -293,9 +293,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Passion Fruit"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": ["Strawberry"],
   "extras": []
@@ -304,9 +304,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Raspberry", "Coconut", "Blackberry"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -315,9 +315,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Watermelon","Mango"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": ["Passion Fruit Pearls"]
@@ -326,9 +326,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Mountain Dew",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": [],
   "extras": ["Frozen Strawberries"]
@@ -338,7 +338,7 @@
   "type": "Soda", 
   "ingredients": { 
     "base": "Sprite", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Mango", "Pineapple", "Strawberry"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -351,9 +351,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Watermelon","Peach", "Strawberry"],
-  "cream": [],
+  "cream":"",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -362,9 +362,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Watermelon","Pineapple"],
-  "cream": [],
+  "cream":"",
   "fruits": [],
   "purees": [],
   "extras": ["Strawberry Pearls"]
@@ -373,9 +373,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cranberry"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": ["Raspberry Puree"],
   "extras": []
@@ -385,7 +385,7 @@
   "type": "Soda", 
   "ingredients": { 
     "base": "Sprite", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Blue Raspberry"], 
     "cream": "", 
     "fruits": [], 
@@ -399,7 +399,7 @@
   "type": "Soda", 
   "ingredients": { 
     "base": "Sprite", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Strawberry"], 
     "cream": "", 
     "fruits": [], 
@@ -412,9 +412,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Lemonade",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Guava", "Grapefruit"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": [],
   "extras": []
@@ -423,9 +423,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Lemonade",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Mango", "Passion Fruit"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -434,9 +434,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Coconut"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -446,7 +446,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Strawberry", "Guava"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -460,7 +460,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Mountain Dew", 
+    "topOff":"Mountain Dew", 
     "syrups": ["Blue Raspberry", "Coconut", "Pineapple"], 
     "cream": "Half and Half", 
     "fruits": [], 
@@ -474,7 +474,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Mountain Dew", 
+    "topOff":"Mountain Dew", 
     "syrups": ["Pineapple"], 
     "cream": "Coconut Cream", 
     "fruits": ["Strawberry"], 
@@ -488,7 +488,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Sprite", 
+    "topOff":"Sprite", 
     "syrups": ["Grapefruit", "Pineapple"], 
     "cream": "Coconut Cream", 
     "fruits": ["Mango"], 
@@ -502,7 +502,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Sprite", 
+    "topOff":"Sprite", 
     "syrups": [], 
     "cream": "Vanilla Cream", 
     "fruits": ["Peach"], 
@@ -516,7 +516,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Ginger Ale", 
+    "topOff":"Ginger Ale", 
     "syrups": ["Raspberry", "Blackberry", "Strawberry"], 
     "cream": "Vanilla Cream", 
     "fruits": [], 
@@ -530,7 +530,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Grapefruit", "Mango"], 
     "cream": "", 
     "fruits": [], 
@@ -544,7 +544,7 @@
   "type": "Blended Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Peach", "Pineapple"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -555,10 +555,10 @@
 
 { 
   "name":"Drama Queen", 
-  "type": "Soda", 
+  "type": "Reviver", 
   "ingredients": { 
     "base": "SF Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["SF Strawberry", "SF Peach", "SF Coconut"], 
     "cream": "", 
     "fruits": [], 
@@ -572,7 +572,7 @@
   "type": "Reviver", 
   "ingredients": {
   "base": "Reviver", 
-    "top-off":"Mountain Dew", 
+    "topOff":"Mountain Dew", 
     "syrups": ["Blackberry", "Coconut"], 
     "cream": "Half and Half", 
     "fruits": ["Fresh Lime"], 
@@ -585,9 +585,9 @@
 "type": "Reviver", 
 "ingredients": {
   "base": "Reviver",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Passion Fruit", "Guava"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": [],
   "extras": []
@@ -596,9 +596,9 @@
 "type": "Reviver", 
 "ingredients": {
   "base": "Reviver",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Peach", "Pineapple"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -608,7 +608,7 @@
   "type": "Reviver", 
 "ingredients": {
   "base": "Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Mango"], 
     "cream": "Coconut Cream", 
     "fruits": ["Strawberry"], 
@@ -622,7 +622,7 @@
   "type": "Reviver", 
 "ingredients": {
   "base": "Reviver", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Peach", "Mango", "Raspberry"], 
     "cream": "", 
     "fruits": ["Fresh Orange"], 
@@ -636,7 +636,7 @@
   "type": "Reviver", 
   "ingredients": {
     "base": "Reviver", 
-    "top-off":"Sprite", 
+    "topOff":"Sprite", 
     "syrups": ["Strawberry", "Coconut"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -649,9 +649,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Strawberry"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": [],
   "extras": []
@@ -660,9 +660,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cranberry", "SF Vanilla"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": ["Strawberry Puree"],
   "extras": []
@@ -671,9 +671,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Cranberry", "SF Vanilla"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": [],
   "extras": []
@@ -682,9 +682,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Vanilla", "SF Coconut"],
-  "cream": [],
+  "cream":"",
   "fruits": [],
   "purees": [],
   "extras": ["Frozen Mangos", "Frozen Strawberries"]
@@ -693,9 +693,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Vanilla", "SF Coconut"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": ["Mango Puree"],
   "extras": ["Frozen Mangos"]
@@ -704,9 +704,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Vanilla", "SF Coconut"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": ["Strawberry Puree"],
   "extras": ["Frozen Strawberries"]
@@ -715,9 +715,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Guava", "Grapefruit"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": [],
   "extras": []
@@ -726,9 +726,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Peach"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": [],
   "extras": []
@@ -737,9 +737,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Pineapple"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": ["Strawberry Puree"],
   "extras": []
@@ -748,9 +748,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Coconut"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Orange"],
   "purees": [],
   "extras": []
@@ -759,9 +759,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Peach", "SF Vanilla", "SF Pineapple"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lime"],
   "purees": ["Raspberry Puree"],
   "extras": []
@@ -770,9 +770,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Grapefruit"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": ["Mango Puree"],
   "extras": []
@@ -781,9 +781,9 @@
   "type": "Hot Cocoa", 
   "ingredients": {
   "base": "Cocoa",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Raspberry"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -792,9 +792,9 @@
   "type": "Hot Cocoa", 
   "ingredients": {
   "base": "Cocoa",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Hazelnut"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -804,7 +804,7 @@
   "type": "Frozen Cocoa", 
   "ingredients": {
   "base": "Cocoa", 
-    "top-off":"Water", 
+    "topOff":"Water", 
     "syrups": ["Vanilla"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -818,7 +818,7 @@
   "type": "Frozen Cocoa", 
   "ingredients": {
   "base": "Cocoa", 
-    "top-off":"Water", 
+    "topOff":"Water", 
     "syrups": ["English Toffee"], 
     "cream": "Vanilla Cream", 
     "fruits": [], 
@@ -832,7 +832,7 @@
   "type": "Frozen Cocoa", 
   "ingredients": {
   "base": "Cocoa", 
-    "top-off":"Water", 
+    "topOff":"Water", 
     "syrups": ["Peppermint"], 
     "cream": "Coconut Cream", 
     "fruits": [], 
@@ -845,9 +845,9 @@
   "type": "Hot Cocoa", 
   "ingredients": {
   "base": "Cocoa",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Vanilla"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -856,9 +856,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Root Beer",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Butterscotch"],
-  "cream": ["Vanilla Cream"],
+  "cream": "Vanilla Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -867,9 +867,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Root Beer",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Toasted Marshmallow"],
-  "cream": ["Half and Half"],
+  "cream": "Half and Half",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -878,9 +878,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Fresca",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Passion Fruit"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": ["Fresh Orange"],
   "purees": ["Mango Puree"],
   "extras": []
@@ -889,9 +889,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Fresca",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Peach", "Strawberry", "Raspberry"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": [],
   "extras": []
@@ -901,7 +901,7 @@
   "type": "Soda", 
   "ingredients": { 
     "base": "Fresca", 
-    "top-off":"Lemonade", 
+    "topOff":"Lemonade", 
     "syrups": ["Pomegranate", "Peach"], 
     "cream": "", 
     "fruits": ["Fresh Lemon"], 
@@ -914,9 +914,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Ginger Ale",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pomegranate", "Cranberry"],
-  "cream": [],
+  "cream":"",
   "fruits": ["Fresh Lemon"],
   "purees": [],
   "extras": []
@@ -925,9 +925,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Orange Soda",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Orange Soda", "Vanilla"],
-  "cream": ["Half and Half"],
+  "cream": "Half and Half",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -936,9 +936,9 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Pineapple"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": ["Peach Puree"],
   "extras": []
@@ -947,9 +947,9 @@
 "type": "Refresher", 
 "ingredients": {
   "base": "Sparkling Water",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["SF Raspberry", "SF Pineapple", "SF Coconut", "SF Vanilla"],
-  "cream": ["Coconut Cream"],
+  "cream": "Coconut Cream",
   "fruits": [],
   "purees": [],
   "extras": []
@@ -958,7 +958,7 @@
 "type": "Soda", 
 "ingredients": {
   "base": "Sprite",
-  "top-off":"",
+  "topOff":"",
   "syrups": ["Tiger's Blood"],
   "cream": "Coconut Cream",
   "fruits": [],

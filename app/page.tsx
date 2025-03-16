@@ -1,20 +1,15 @@
-"use client"; // Now Home.tsx is interactive
+"use client";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { useState } from "react";
+import DrinkGenerator from "@/components/drinkCard";
 
 export default function Home() {
-  const handleGenerateDrink = () => {
-    console.log("Generating drink...");
-    // Add logic to generate a drink
-  };
-
   return (
     <div className="grid grid-rows-[auto_1fr_auto] min-h-screen">
-      <Header onGenerate={handleGenerateDrink} />
+      <Header />
       <main className="flex flex-col items-center justify-center p-8">
-        Swig Ratio Trainer
+        <DrinkGenerator />
       </main>
       <Footer />
     </div>
