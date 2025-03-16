@@ -1,0 +1,970 @@
+[
+    {
+      "name": "Texas Tab",
+      "type": "Soda",
+      "ingredients": {
+        "base": "Dr. Pepper",
+        "top-off":"",
+        "syrups": ["Vanilla"],
+        "cream": "Coconut Cream",
+        "fruits": [],
+        "purees": [],
+        "extras": []
+      }
+    },
+    { "name":"Raspberry Dream", 
+    "type": "Soda",
+    "ingredients": {
+      "base": "Dr. Pepper",
+      "top-off":"",
+      "syrups": [],
+      "cream": "Coconut Cream",
+      "fruits": [],
+      "purees": ["Raspberry Puree"],
+      "extras": []
+    }  
+    },
+{ "name":"DDD", 
+"type": "Soda",
+"ingredients": {
+  "base": "Diet Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Coconut"],
+  "cream": "",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}  
+},
+{ "name":"Spring Fling", 
+"type": "Soda",
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Vanilla"],
+  "cream": "Coconut Cream",
+  "fruits": [],
+  "purees": ["Strawberry Puree"],
+  "extras": []
+}  
+},
+{ "name":"Dirty Dr.Pepper", 
+"type": "Soda",
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Coconut"],
+  "cream": "",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}  
+},
+{ "name":"Dirty S.O.P", 
+"type": "Soda",
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Coconut", "Peach"],
+  "cream": "Half and Half",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}  
+},
+{ "name":"Life's a Peach", 
+"type": "Soda",
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Vanilla", "Peach"],
+  "cream": "Half and Half",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}  
+},
+{ "name":"Naughty & Nice", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["English Toffee"],
+  "cream": "Half and Half",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"Princess Peach", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Peach"],
+  "cream": "Coconut Cream",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"Save Me Jade", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Diet Dr. Pepper",
+  "top-off":"",
+  "syrups": ["SF Coconut", "SF Vanilla"],
+  "cream": "",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"The Heartbreaker", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Blackberry", "Coconut"],
+  "cream": "Half and Half",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"The Ring King", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups": ["Cupcake"],
+  "cream": "Vanilla Cream",
+  "fruits": [],
+  "purees": ["Strawberry Puree"],
+  "extras": []
+}
+},
+{ "name":"Malibu", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Dr. Pepper",
+  "top-off":"",
+  "syrups":["Coconut", "Vanilla"],
+  "cream": "",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"Big Al", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Diet Coke",
+  "top-off":"",
+  "syrups": ["Coconut"],
+  "cream": "",
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": []
+}
+},
+{ "name":"The Founder", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Diet Coke",
+  "top-off":"",
+  "syrups": ["SF Coconut"],
+  "cream": "Coconut Cream",
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"This Bliss", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Diet Coke",
+  "top-off":"",
+  "syrups": ["Cranberry"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Just Peachy", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Coke Zero",
+  "top-off":"",
+  "syrups": ["Pineapple"],
+  "cream": ["Coconut Cream"],
+  "fruits": ["Fresh Lime"],
+  "purees": ["Peach Puree"],
+  "extras": []
+}},
+{ "name":"Waikiki", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Coke",
+  "top-off":"",
+  "syrups": ["Pineapple"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Cherry Bomb", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Pepsi",
+  "top-off":"",
+  "syrups": ["Cherry", "Coconut"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Beach Babe", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Peach", "Raspberry"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Bloody Wild", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": [],
+  "cream": [],
+  "fruits": [],
+  "purees": ["Mango Puree", "Strawberry"],
+  "extras": []
+}},
+{ "name":"Busta Limes", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": [],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": ["Mango Puree", "Strawberry Puree"],
+  "extras": []
+}},
+{ "name":"Dew Gooder", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Pineapple"],
+  "cream": ["Coconut Cream"],
+  "fruits": ["Fresh Lime"],
+  "purees": ["Raspberry Puree"],
+  "extras": []
+}},
+{ "name":"Endless Summer", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Pomegranate", "Grapefruit"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Guava Have It", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Guava", "Strawberry"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Jolly Elf", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Passion Fruit"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": ["Strawberry"],
+  "extras": []
+}},
+{ "name":"The Rocket", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Raspberry", "Coconut", "Blackberry"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Watermelon Sugar", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Watermelon","Mango"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": ["Passion Fruit Pearls"]
+}},
+{ "name":"Candy Girl", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Mountain Dew",
+  "top-off":"",
+  "syrups": ["Coconut"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": ["Frozen Strawberries"]
+}},
+{ 
+  "name":"Hula Girl", 
+  "type": "Soda", 
+  "ingredients": { 
+    "base": "Sprite", 
+    "top-off":"Lemonade", 
+    "syrups": ["Mango", "Pineapple", "Strawberry"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ "name":"Loop-T-Loop", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Watermelon","Peach", "Strawberry"],
+  "cream": [],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Poppin' Pineapple", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Watermelon","Pineapple"],
+  "cream": [],
+  "fruits": [],
+  "purees": [],
+  "extras": ["Strawberry Pearls"]
+}},
+{ "name":"Riptide", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Cranberry"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": ["Raspberry Puree"],
+  "extras": []
+}},
+{ 
+  "name":"Shark Attack", 
+  "type": "Soda", 
+  "ingredients": { 
+    "base": "Sprite", 
+    "top-off":"Lemonade", 
+    "syrups": ["Blue Raspberry"], 
+    "cream": "", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Gummy Shark"] 
+  } 
+},
+
+{ 
+  "name":"Unlucky Ducky", 
+  "type": "Soda", 
+  "ingredients": { 
+    "base": "Sprite", 
+    "top-off":"Lemonade", 
+    "syrups": ["Strawberry"], 
+    "cream": "", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Gummy Shark"] 
+  } 
+},
+
+{ "name":"Beach Bum", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Lemonade",
+  "top-off":"",
+  "syrups": ["Guava", "Grapefruit"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"The Tropic", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Lemonade",
+  "top-off":"",
+  "syrups": ["Mango", "Passion Fruit"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Snowball", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Coconut"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ 
+  "name":"All Star", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["Strawberry", "Guava"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Cloud 9", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Mountain Dew", 
+    "syrups": ["Blue Raspberry", "Coconut", "Pineapple"], 
+    "cream": "Half and Half", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Daisy Duke", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Mountain Dew", 
+    "syrups": ["Pineapple"], 
+    "cream": "Coconut Cream", 
+    "fruits": ["Strawberry"], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Flirty Flamingo", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Sprite", 
+    "syrups": ["Grapefruit", "Pineapple"], 
+    "cream": "Coconut Cream", 
+    "fruits": ["Mango"], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Peaches N Cream", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Sprite", 
+    "syrups": [], 
+    "cream": "Vanilla Cream", 
+    "fruits": ["Peach"], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Polar Punch", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Ginger Ale", 
+    "syrups": ["Raspberry", "Blackberry", "Strawberry"], 
+    "cream": "Vanilla Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Sucker Punch", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["Grapefruit", "Mango"], 
+    "cream": "", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Rubber Ducky", 
+  "type": "Blended Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["Peach", "Pineapple"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Reviver Concentrate"] 
+  } 
+},
+
+{ 
+  "name":"Drama Queen", 
+  "type": "Soda", 
+  "ingredients": { 
+    "base": "SF Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["SF Strawberry", "SF Peach", "SF Coconut"], 
+    "cream": "", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ 
+  "name":"Mountain Man", 
+  "type": "Reviver", 
+  "ingredients": {
+  "base": "Reviver", 
+    "top-off":"Mountain Dew", 
+    "syrups": ["Blackberry", "Coconut"], 
+    "cream": "Half and Half", 
+    "fruits": ["Fresh Lime"], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ "name":"P.O.G.", 
+"type": "Reviver", 
+"ingredients": {
+  "base": "Reviver",
+  "top-off":"",
+  "syrups": ["Passion Fruit", "Guava"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Ride Or Die", 
+"type": "Reviver", 
+"ingredients": {
+  "base": "Reviver",
+  "top-off":"",
+  "syrups": ["Peach", "Pineapple"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ 
+  "name":"Super Trooper", 
+  "type": "Reviver", 
+"ingredients": {
+  "base": "Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["Mango"], 
+    "cream": "Coconut Cream", 
+    "fruits": ["Strawberry"], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ 
+  "name":"Surf's Up", 
+  "type": "Reviver", 
+"ingredients": {
+  "base": "Reviver", 
+    "top-off":"Lemonade", 
+    "syrups": ["Peach", "Mango", "Raspberry"], 
+    "cream": "", 
+    "fruits": ["Fresh Orange"], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ 
+  "name":"Weekender", 
+  "type": "Reviver", 
+  "ingredients": {
+    "base": "Reviver", 
+    "top-off":"Sprite", 
+    "syrups": ["Strawberry", "Coconut"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": [] 
+  } 
+},
+
+{ "name":"Berry Nice", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["SF Strawberry"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Mistletoe Madness", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["Cranberry", "SF Vanilla"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": ["Strawberry Puree"],
+  "extras": []
+}},
+{ "name":"Berry Swigmas", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["Cranberry", "SF Vanilla"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Fruit Water", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["SF Vanilla", "SF Coconut"],
+  "cream": [],
+  "fruits": [],
+  "purees": [],
+  "extras": ["Frozen Mangos", "Frozen Strawberries"]
+}},
+{ "name":"Mango Breeze", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["SF Vanilla", "SF Coconut"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": ["Mango Puree"],
+  "extras": ["Frozen Mangos"]
+}},
+{ "name":"Strawberry Breeze", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["SF Vanilla", "SF Coconut"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": ["Strawberry Puree"],
+  "extras": ["Frozen Strawberries"]
+}},
+{ "name":"Pretty in Pink", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["Guava", "Grapefruit"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Sandy Cheeks", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["SF Peach"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Summer Splash", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["SF Pineapple"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": ["Strawberry Puree"],
+  "extras": []
+}},
+{ "name":"Tiki Tiki", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["SF Coconut"],
+  "cream": [],
+  "fruits": ["Fresh Orange"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"The Fighter", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["SF Peach", "SF Vanilla", "SF Pineapple"],
+  "cream": [],
+  "fruits": ["Fresh Lime"],
+  "purees": ["Raspberry Puree"],
+  "extras": []
+}},
+{ "name":"Unbreakable", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Water",
+  "top-off":"",
+  "syrups": ["Grapefruit"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": ["Mango Puree"],
+  "extras": []
+}},
+{ "name":"Dream Cocoa", 
+  "type": "Hot Cocoa", 
+  "ingredients": {
+  "base": "Cocoa",
+  "top-off":"",
+  "syrups": ["Raspberry"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"The Nutcracker", 
+  "type": "Hot Cocoa", 
+  "ingredients": {
+  "base": "Cocoa",
+  "top-off":"",
+  "syrups": ["Hazelnut"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ 
+  "name":"Fancy Cocoa", 
+  "type": "Frozen Cocoa", 
+  "ingredients": {
+  "base": "Cocoa", 
+    "top-off":"Water", 
+    "syrups": ["Vanilla"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Hot Cocoa Mix"] 
+  } 
+},
+
+{ 
+  "name":"Ninny Muggins", 
+  "type": "Frozen Cocoa", 
+  "ingredients": {
+  "base": "Cocoa", 
+    "top-off":"Water", 
+    "syrups": ["English Toffee"], 
+    "cream": "Vanilla Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Hot Cocoa Mix"] 
+  } 
+},
+
+{ 
+  "name":"Serendipity", 
+  "type": "Frozen Cocoa", 
+  "ingredients": {
+  "base": "Cocoa", 
+    "top-off":"Water", 
+    "syrups": ["Peppermint"], 
+    "cream": "Coconut Cream", 
+    "fruits": [], 
+    "purees": [], 
+    "extras": ["Hot Cocoa Mix"] 
+  } 
+},
+
+{ "name":"Coco Cocoa", 
+  "type": "Hot Cocoa", 
+  "ingredients": {
+  "base": "Cocoa",
+  "top-off":"",
+  "syrups": ["Vanilla"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Buttery Beer", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Root Beer",
+  "top-off":"",
+  "syrups": ["Butterscotch"],
+  "cream": ["Vanilla Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Happy Camper", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Root Beer",
+  "top-off":"",
+  "syrups": ["Toasted Marshmallow"],
+  "cream": ["Half and Half"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Island Time", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Fresca",
+  "top-off":"",
+  "syrups": ["Passion Fruit"],
+  "cream": ["Coconut Cream"],
+  "fruits": ["Fresh Orange"],
+  "purees": ["Mango Puree"],
+  "extras": []
+}},
+{ "name":"Pink Bahama", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Fresca",
+  "top-off":"",
+  "syrups": ["Peach", "Strawberry", "Raspberry"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": [],
+  "extras": []
+}},
+{ 
+  "name":"Sleigh All Day", 
+  "type": "Soda", 
+  "ingredients": { 
+    "base": "Fresca", 
+    "top-off":"Lemonade", 
+    "syrups": ["Pomegranate", "Peach"], 
+    "cream": "", 
+    "fruits": ["Fresh Lemon"], 
+    "purees": ["Strawberry Puree"], 
+    "extras": [] 
+  } 
+},
+
+{ "name":"Daydreamer", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Ginger Ale",
+  "top-off":"",
+  "syrups": ["Pomegranate", "Cranberry"],
+  "cream": [],
+  "fruits": ["Fresh Lemon"],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Orange You Glad", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Orange Soda",
+  "top-off":"",
+  "syrups": ["Orange Soda", "Vanilla"],
+  "cream": ["Half and Half"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Dizzle", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Pineapple"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": ["Peach Puree"],
+  "extras": []
+}},
+{ "name":"The Demi", 
+"type": "Refresher", 
+"ingredients": {
+  "base": "Sparkling Water",
+  "top-off":"",
+  "syrups": ["SF Raspberry", "SF Pineapple", "SF Coconut", "SF Vanilla"],
+  "cream": ["Coconut Cream"],
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}},
+{ "name":"Missionary", 
+"type": "Soda", 
+"ingredients": {
+  "base": "Sprite",
+  "top-off":"",
+  "syrups": ["Tiger's Blood"],
+  "cream": "Coconut Cream",
+  "fruits": [],
+  "purees": [],
+  "extras": []
+}
+}
+]
+  
