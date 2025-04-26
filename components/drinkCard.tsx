@@ -12,9 +12,9 @@ export default function DrinkGenerator() {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col justify-start">
       {drink && drink.name && (
-        <div className="mt-4 p-4">
+        <div className="mt-4 py-4">
           <h2 className="text-xl font-bold">{drink.name}</h2>
           <h3>Base: {drink.ingredients.base}</h3>
           {drink.ingredients.topOff ? <h3>Top-Off: {drink.ingredients.topOff}</h3>:null}
@@ -27,7 +27,7 @@ export default function DrinkGenerator() {
       )}
       <button
         onClick={handleGenerateDrink}
-        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        className="w-50 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
         Generate Drink
       </button>
     </div>
