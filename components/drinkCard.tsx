@@ -16,6 +16,13 @@ export default function DrinkGenerator() {
       {drink && drink.name && (
         <div className="mt-4 p-4">
           <h2 className="text-xl font-bold">{drink.name}</h2>
+          <h3>Base: {drink.ingredients.base}</h3>
+          {drink.ingredients.topOff ? <h3>Top-Off: {drink.ingredients.topOff}</h3>:null}
+          {drink.ingredients.syrups.length>0 ? <h3>Flavors: {drink.ingredients.syrups.join(', ')}</h3>:null}
+          {drink.ingredients.purees.length>0 ? <h3>Purees: {drink.ingredients.purees.join(', ')}</h3>:null}
+          {drink.ingredients.fruits.length>0 ? <h3>Fruit: {drink.ingredients.fruits}</h3>:null}
+          {drink.ingredients.cream ? <h3>Cream: {drink.ingredients.cream}</h3>:null}
+          {drink.ingredients.extras.length>0 ? <h3>Extras: {drink.ingredients.extras.join(', ')}</h3>:null}
         </div>
       )}
       <button

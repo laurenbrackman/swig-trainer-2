@@ -445,7 +445,7 @@
   "name":"All Star", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Lemonade", 
     "syrups": ["Strawberry", "Guava"], 
     "cream": "Coconut Cream", 
@@ -459,7 +459,7 @@
   "name":"Cloud 9", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Mountain Dew", 
     "syrups": ["Blue Raspberry", "Coconut", "Pineapple"], 
     "cream": "Half and Half", 
@@ -473,7 +473,7 @@
   "name":"Daisy Duke", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Mountain Dew", 
     "syrups": ["Pineapple"], 
     "cream": "Coconut Cream", 
@@ -487,7 +487,7 @@
   "name":"Flirty Flamingo", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Sprite", 
     "syrups": ["Grapefruit", "Pineapple"], 
     "cream": "Coconut Cream", 
@@ -501,7 +501,7 @@
   "name":"Peaches N Cream", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Sprite", 
     "syrups": [], 
     "cream": "Vanilla Cream", 
@@ -515,7 +515,7 @@
   "name":"Polar Punch", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Ginger Ale", 
     "syrups": ["Raspberry", "Blackberry", "Strawberry"], 
     "cream": "Vanilla Cream", 
@@ -529,7 +529,7 @@
   "name":"Sucker Punch", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Lemonade", 
     "syrups": ["Grapefruit", "Mango"], 
     "cream": "", 
@@ -543,7 +543,7 @@
   "name":"Rubber Ducky", 
   "type": "Blended Reviver", 
   "ingredients": {
-  "base": "Reviver", 
+  "base": "Ice", 
     "topOff":"Lemonade", 
     "syrups": ["Peach", "Pineapple"], 
     "cream": "Coconut Cream", 
@@ -918,17 +918,6 @@
   "syrups": ["Pomegranate", "Cranberry"],
   "cream":"",
   "fruits": ["Fresh Lemon"],
-  "purees": [],
-  "extras": []
-}},
-{ "name":"Orange You Glad", 
-"type": "Soda", 
-"ingredients": {
-  "base": "Orange Soda",
-  "topOff":"",
-  "syrups": ["Orange Soda", "Vanilla"],
-  "cream": "Half and Half",
-  "fruits": [],
   "purees": [],
   "extras": []
 }},
