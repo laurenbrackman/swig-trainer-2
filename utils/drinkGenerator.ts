@@ -12,6 +12,5 @@ export function getRandomDrink(): Drink {
 }
 
 export function generateRandomRecipe(): Drink {
-  const drink = getRandomDrink();
-  return drink;
+  return getRandomDrink();
 }

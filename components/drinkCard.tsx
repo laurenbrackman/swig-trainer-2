@@ -14,13 +14,8 @@ export default function DrinkGenerator() {
   return (
     <div className="flex flex-col items-center">
       {drink && drink.name && (
-        <div className="mt-4 p-4 border rounded-lg shadow">
+        <div className="mt-4 p-4">
           <h2 className="text-xl font-bold">{drink.name}</h2>
-          <p>{drink.type}</p>
-          <h3 className="font-semibold">Ingredients:</h3>
-          <pre className="text-left whitespace-pre-wrap">
-            {JSON.stringify(drink.ingredients, null, 2)}
-          </pre>
         </div>
       )}
       <button

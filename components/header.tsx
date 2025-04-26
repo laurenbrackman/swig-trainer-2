@@ -1,4 +1,4 @@
-"use client"; // Header needs to be a client component for button interactions
+"use client";
 
 export default function Header() {
   return (
