@@ -46,11 +46,9 @@ export class Drink {
     }
     else if (this.type === "Blended Reviver") {
       const blendedReviverRatios: Record<number, number> = {
-        12: 4,
         16: 5,
         24: 7.5,
         32: 10,
-        44: 12.5,
       };
       return blendedReviverRatios[size] / this.ingredients.syrups.length;
     }
@@ -99,21 +97,17 @@ export class Drink {
   
     if (this.type === "Reviver") {
       const reviverPureeRatios: Record<number, number> = {
-        12: 0.25,
         16: 0.5,
         24: 0.75,
         32: 1,
-        44: 1.25,
       };
       return reviverPureeRatios[size];
     } 
     else if (this.type === "Blended Reviver") {
       const blendedReviverPureeRatios: Record<number, number> = {
-        12: 0.75,
         16: 1,
         24: 1.5,
         32: 2,
-        44: 2.5,
       };
       return blendedReviverPureeRatios[size];
     } 
@@ -125,12 +119,11 @@ export class Drink {
     }
   }
 
-  generateRecipe(size: number) {
+  getRatios(size: number) {
     this.size = size;
     const syrupRatio = this.getSyrupRatio(size);
     const creamRatio = this.getCreamRatio(size);
     const pureeRatio = this.getPureeRatio(size);
-    console.log({ syrupRatio, creamRatio, pureeRatio });
-    return this;
+    return {syrupRatio, creamRatio, pureeRatio};
   }
 }

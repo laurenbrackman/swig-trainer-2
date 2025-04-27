@@ -31,6 +31,6 @@ export function pickExactDrink(): Drink {
   }
 
   (drink as any).size = randomSize;
-  drink.generateRecipe(randomSize);
+  drink.getRatios(randomSize);
   return drink;
 }
