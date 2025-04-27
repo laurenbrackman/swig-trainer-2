@@ -4,14 +4,14 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import DrinkCard from "@/components/drinkCard";
 import { useState } from "react";
-import { generateRandomRecipe } from "../utils/drinkGenerator";
+import { pickExactDrink } from "../utils/drinkGenerator";
 import { Drink } from "@/utils/drinks";
 
 export default function Home() {
   const [drink, setDrink] = useState<Drink | null>(null);
 
   function handleGenerateDrink() {
-    const generatedRecipe = generateRandomRecipe();
+    const generatedRecipe = pickExactDrink();
     setDrink(generatedRecipe);
   }
 

@@ -18,6 +18,7 @@ export class Drink {
     purees: string[];
     extras: string[];
   };
+  size?: number;
 
   constructor(
     name: string,
@@ -37,14 +38,63 @@ export class Drink {
     this.ingredients = ingredients;
   }
 
-  generateRecipe(size: number) {
+  private getSyrupRatio(size: number): number {
     const ratios = sizeRatios[size];
-    if (!ratios) throw new Error("Invalid size");
 
-    return {
-      name: this.name,
-      type: this.type,
-      size
+    if (this.ingredients.syrups.length === 0) {
+      return 0;
     }
+    else if (this.type === "Blended Reviver") {
+      const blendedReviverRatios: Record<number, number> = {
+        12: 4,
+        16: 5,
+        24: 7.5,
+        32: 10,
+        44: 12.5,
+      };
+      return blendedReviverRatios[size] / this.ingredients.syrups.length;
+    }
+    else if (this.type === "Soda") {
+      return ratios.syrup / this.ingredients.syrups.length;
+    }
+    else if (this.type === "Reviver" || this.type === "Refresher") {
+      return (ratios.syrup * 2) / this.ingredients.syrups.length;
+    }
+    else if (this.type === "Hot Cocoa") {
+      return 1.5;
+    }
+    else if (this.type === "Frozen Cocoa") {
+      return 3;
+    }
+    else {
+      return 0;
+    }
+  }
+
+  private getCreamRatio(size: number): number {
+    const firstDigit = Number(size.toString()[0]); // get first digit of size
+    if (this.ingredients.cream.length === 0) {
+      return 0;
+    }
+    else if (this.type === "Hot Cocoa") {
+      return 2;
+    } 
+    else if (this.type === "Frozen Cocoa") {
+      return 5;
+    } 
+    else if (this.type === "Reviver" || this.type === "Blended Reviver") {
+      return firstDigit + 1;
+    } 
+    else {
+      return firstDigit;
+    }
+  }
+
+  generateRecipe(size: number) {
+    this.size = size;
+    const syrupRatio = this.getSyrupRatio(size);
+    const creamRatio = this.getCreamRatio(size);
+    console.log(creamRatio);
+    return this;
   }
 }
