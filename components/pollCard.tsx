@@ -11,8 +11,7 @@ export default function PollCard({ drink }: PollCardProps) {
   const [selectedType, setSelectedType] = useState<string>("");
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
-
-  const drinkTypes = ["Soda", "Reviver", "Refresher", "Blended Reviver", "Hot Cocoa", "Frozen Cocoa"];
+  const cupOptions = ["Foam", "Paper", "Plastic"];
 
   useEffect(() => {
     setSelectedType("");
@@ -22,16 +21,16 @@ export default function PollCard({ drink }: PollCardProps) {
 
   function handleSubmit() {
     setSubmitted(true);
-    setIsCorrect(selectedType === drink.type);
+    setIsCorrect(selectedType === drink.getCupType());
   }
 
   return (
     <div className="border rounded-lg p-6 shadow-md mt-4 text-center">
       {!submitted ? (
         <>
-          <h3 className="mt-6 text-lg font-semibold">What type of drink is this?</h3>
+          <h3 className="mt-6 text-lg font-semibold">What type of cup is needed?</h3>
           <div className="flex flex-wrap justify-center gap-2 mt-4">
-            {drinkTypes.map((type) => (
+            {cupOptions.map((type) => (
               <button
                 key={type}
                 className={`px-4 py-2 rounded-full border ${
@@ -58,7 +57,7 @@ export default function PollCard({ drink }: PollCardProps) {
             <p className="text-green-600 font-semibold text-xl">Correct! 🎉</p>
           ) : (
             <p className="text-red-600 font-semibold text-xl">
-              Incorrect. The correct answer was <strong>{drink.type}</strong>.
+              Incorrect. The correct answer was <strong>{drink.getCupType()}</strong>.
             </p>
           )}
         </div>

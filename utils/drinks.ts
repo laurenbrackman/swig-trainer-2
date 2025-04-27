@@ -119,6 +119,25 @@ export class Drink {
     }
   }
 
+  getCupType(): string {
+    if (this.type === "Hot Cocoa") {
+      return "Paper";
+    } 
+    else if (this.size === 44) {
+      return "Foam";
+    } 
+    else if (this.size === 12 || this.size === 16) {
+      return "Plastic";
+    } 
+    else if (this.type === "Soda") {
+      return "Foam";
+    } 
+    else {
+      return "Plastic";
+    }
+  }
+  
+
   getRatios(size: number) {
     this.size = size;
     const syrupRatio = this.getSyrupRatio(size);
