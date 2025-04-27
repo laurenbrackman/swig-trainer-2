@@ -14,8 +14,13 @@ type Question = {
   correctAnswer: string;
   field: string; // ex: "cup", "cream", "syrup1", "syrup2", etc.
 };
-
+  
 function generateQuestions(drink: Drink): Question[] {
+    const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== ""
+    ? drink.ingredients.cream
+    : "None";
+    const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half", "None"];
+
     return [
       {
         id: 0,
@@ -26,9 +31,9 @@ function generateQuestions(drink: Drink): Question[] {
       },
       {
         id: 1,
-        questionText: "How many pumps of cream?",
-        options: ["1", "2", "3", "4", "5"],
-        correctAnswer: drink.getCreamRatio(drink.size!).toString(),
+        questionText: "Which cream is used?",
+        options: availableCreamTypes,
+        correctAnswer: correctCream,
         field: "cream",
       },
       // More questions: syrup1 amount, syrup2 amount, puree amount, etc.
@@ -109,7 +114,7 @@ export default function PollCard({ drink }: PollCardProps) {
       ) : (
         <div className="mt-6">
           <h3 className="text-xl font-bold mb-4">Results</h3>
-          <p className="text-2xl mb-6">
+          <p className="text-lg mb-6">
             You got {score} out of {questions.length} correct!
         </p>
           {questions.map((q, index) => (
