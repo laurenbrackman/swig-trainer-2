@@ -90,11 +90,47 @@ export class Drink {
     }
   }
 
+  private getPureeRatio(size: number): number {
+    if (this.ingredients.purees.length == 0) {
+      return 0;
+    }
+  
+    const firstDigit = Number(size.toString()[0]);
+  
+    if (this.type === "Reviver") {
+      const reviverPureeRatios: Record<number, number> = {
+        12: 0.25,
+        16: 0.5,
+        24: 0.75,
+        32: 1,
+        44: 1.25,
+      };
+      return reviverPureeRatios[size];
+    } 
+    else if (this.type === "Blended Reviver") {
+      const blendedReviverPureeRatios: Record<number, number> = {
+        12: 0.75,
+        16: 1,
+        24: 1.5,
+        32: 2,
+        44: 2.5,
+      };
+      return blendedReviverPureeRatios[size];
+    } 
+    else if (this.type === "Refresher") {
+      return (firstDigit / 4) * 2;
+    } 
+    else {
+      return firstDigit / 4;
+    }
+  }
+
   generateRecipe(size: number) {
     this.size = size;
     const syrupRatio = this.getSyrupRatio(size);
     const creamRatio = this.getCreamRatio(size);
-    console.log(creamRatio);
+    const pureeRatio = this.getPureeRatio(size);
+    console.log({ syrupRatio, creamRatio, pureeRatio });
     return this;
   }
 }
