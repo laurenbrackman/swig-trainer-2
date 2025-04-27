@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { Drink } from "@/utils/drinks";
+import {
+    generateCreamQuestion,
+    generateBaseQuestion,
+    generateSyrupQuestions,
+    generatePureeQuestions
+  } from "@/utils/quizQuestions";
 
 type PollCardProps = {
   drink: Drink;
@@ -15,12 +21,7 @@ type Question = {
   field: string; // ex: "cup", "cream", "syrup1", "syrup2", etc.
 };
   
-function generateQuestions(drink: Drink): Question[] {
-    const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== ""
-    ? drink.ingredients.cream
-    : "None";
-    const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half", "None"];
-
+function generateQuestions(drink: Drink) {
     return [
       {
         id: 0,
@@ -29,16 +30,12 @@ function generateQuestions(drink: Drink): Question[] {
         correctAnswer: drink.getCupType(),
         field: "cup",
       },
-      {
-        id: 1,
-        questionText: "Which cream is used?",
-        options: availableCreamTypes,
-        correctAnswer: correctCream,
-        field: "cream",
-      },
-      // More questions: syrup1 amount, syrup2 amount, puree amount, etc.
+      generateCreamQuestion(drink),
+      generateBaseQuestion(drink),
+      ...generateSyrupQuestions(drink),
+      ...generatePureeQuestions(drink),
     ];
-  }
+}
   
 
 export default function PollCard({ drink }: PollCardProps) {
