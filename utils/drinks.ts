@@ -69,7 +69,7 @@ export class Drink {
     }
   }
 
-  private getCreamRatio(size: number): number {
+  getCreamRatio(size: number): number {
     const firstDigit = Number(size.toString()[0]); // get first digit of size
     if (this.ingredients.cream.length === 0) {
       return 0;
