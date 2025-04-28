@@ -3,8 +3,44 @@ import { Drink } from "@/utils/drinks";
 // Constant options
 export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half", "None"];
 export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree", "None"];
-export const availableSyrupTypes = ["Coconut", "Vanilla", "Peach", "Strawberry", "None"];
-export const availableBases = [
+export const availableSyrupTypes = [
+    "Watermelon",
+    "Vanilla",
+    "Toasted Marshmallow",
+    "Strawberry",
+    "Raspberry",
+    "Pomegranate",
+    "Pineapple",
+    "Peach",
+    "Passion Fruit",
+    "Mojito Mint",
+    "Peppermint",
+    "Mango",
+    "Hazelnut",
+    "Guava",
+    "Apple",
+    "Grapefruit",
+    "Grape",
+    "English Toffee",
+    "Cupcake",
+    "Coconut",
+    "Cherry",
+    "Cranberry",
+    "Butterscotch",
+    "Blue Raspberry",
+    "Blackberry",
+    "SF Watermelon",
+    "SF Strawberry",
+    "SF Raspberry",
+    "SF Peach",
+    "SF Pineapple",
+    "SF Mango",
+    "SF Vanilla",
+    "SF Coconut",
+    "None"
+  ];
+  
+  export const availableBases = [
     "Dr. Pepper",
     "Diet Dr. Pepper",
     "Coke",
@@ -32,7 +68,7 @@ export function generateCreamQuestion(drink: Drink) {
     id: 1,
     questionText: "Which cream is used?",
     options: availableCreamTypes,
-    correctAnswer: correctCream,
+    correctAnswers: [correctCream],
     field: "cream",
   };
 }
@@ -45,33 +81,36 @@ export function generateBaseQuestion(drink: Drink) {
     id: 2,
     questionText: "What is the base of the drink?",
     options: availableBases,
-    correctAnswer: correctBase,
+    correctAnswers: [correctBase],
     field: "base",
   };
 }
 
 // Helper: generate syrup questions
-export function generateSyrupQuestions(drink: Drink) {
-  if (!drink.ingredients.syrups || drink.ingredients.syrups.length === 0) return [];
-
-  return drink.ingredients.syrups.map((syrup, index) => ({
-    id: 3 + index, // keep ids unique
-    questionText: `Which syrup #${index + 1} is used?`,
-    options: availableSyrupTypes,
-    correctAnswer: syrup,
-    field: `syrup${index + 1}`,
-  }));
+export function generateSyrupQuestion(drink: Drink) {
+    const correctSyrups = drink.ingredients.syrups.length > 0
+      ? drink.ingredients.syrups
+      : ["None"];
+  
+    return {
+      id: 3,
+      questionText: "Select all the syrups used in this drink:",
+      options: availableSyrupTypes,
+      correctAnswers: correctSyrups,
+      field: "syrups",
+    };
 }
 
-// Helper: generate puree questions
 export function generatePureeQuestions(drink: Drink) {
-  if (!drink.ingredients.purees || drink.ingredients.purees.length === 0) return [];
+    const correctPurees = drink.ingredients.purees.length > 0
+    ? drink.ingredients.purees
+    : ["None"];
 
-  return drink.ingredients.purees.map((puree, index) => ({
-    id: 6 + index, // shift IDs accordingly
-    questionText: `Which puree #${index + 1} is used?`,
+  return {
+    id: 4,
+    questionText: "Select all the purees used in this drink:",
     options: availablePureeTypes,
-    correctAnswer: puree,
-    field: `puree${index + 1}`,
-  }));
+    correctAnswers: correctPurees,
+    field: "purees",
+  };
 }

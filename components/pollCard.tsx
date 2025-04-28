@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { Drink } from "@/utils/drinks";
 import {
-    generateCreamQuestion,
-    generateBaseQuestion,
-    generateSyrupQuestions,
-    generatePureeQuestions
-  } from "@/utils/quizQuestions";
+  generateCreamQuestion,
+  generateBaseQuestion,
+  generateSyrupQuestion,
+  generatePureeQuestions,
+} from "@/utils/quizQuestions";
 
 type PollCardProps = {
   drink: Drink;
@@ -17,39 +17,60 @@ type Question = {
   id: number;
   questionText: string;
   options: string[];
-  correctAnswer: string;
-  field: string; // ex: "cup", "cream", "syrup1", "syrup2", etc.
+  correctAnswers: string[];
+  field: string;
 };
-  
-function generateQuestions(drink: Drink) {
-    return [
-      {
-        id: 0,
-        questionText: "What type of cup is needed?",
-        options: ["Foam", "Paper", "Plastic"],
-        correctAnswer: drink.getCupType(),
-        field: "cup",
-      },
-      generateCreamQuestion(drink),
-      generateBaseQuestion(drink),
-      ...generateSyrupQuestions(drink),
-      ...generatePureeQuestions(drink),
-    ];
+
+function arraysMatch(arr1: string[], arr2: string[]) {
+  const set1 = new Set(arr1);
+  const set2 = new Set(arr2);
+  if (set1.size !== set2.size) return false;
+  for (const item of set1) {
+    if (!set2.has(item)) return false;
+  }
+  return true;
 }
-  
+
+function generateQuestions(drink: Drink): Question[] {
+  return [
+    {
+      id: 0,
+      questionText: "What type of cup is needed?",
+      options: ["Foam", "Paper", "Plastic"],
+      correctAnswers: [drink.getCupType()],
+      field: "cup",
+    },
+    generateCreamQuestion(drink),
+    generateBaseQuestion(drink),
+    generateSyrupQuestion(drink),
+    generatePureeQuestions(drink),
+  ];
+}
 
 export default function PollCard({ drink }: PollCardProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [userAnswers, setUserAnswers] = useState<Record<number, string>>({});
+  const [userAnswers, setUserAnswers] = useState<Record<number, string[]>>({});
   const [submitted, setSubmitted] = useState(false);
 
   const questions: Question[] = generateQuestions(drink);
+  const currentQuestion = questions[currentQuestionIndex];
 
-  function handleAnswer(option: string) {
-    setUserAnswers((prev) => ({
-      ...prev,
-      [currentQuestionIndex]: option,
-    }));
+  useEffect(() => {
+    setCurrentQuestionIndex(0);
+    setUserAnswers({});
+    setSubmitted(false);
+  }, [drink]);
+
+  function toggleOption(option: string) {
+    setUserAnswers((prev) => {
+      const currentSelections = prev[currentQuestionIndex] || [];
+      return {
+        ...prev,
+        [currentQuestionIndex]: currentSelections.includes(option)
+          ? currentSelections.filter((o) => o !== option)
+          : [...currentSelections, option],
+      };
+    });
   }
 
   function handleNext() {
@@ -60,15 +81,9 @@ export default function PollCard({ drink }: PollCardProps) {
     setSubmitted(true);
   }
 
-  useEffect(() => {
-    setCurrentQuestionIndex(0);
-    setUserAnswers({});
-    setSubmitted(false);
-  }, [drink]);
-
-  const currentQuestion = questions[currentQuestionIndex];
   const score = questions.reduce((acc, q, index) => {
-    return userAnswers[index] === q.correctAnswer ? acc + 1 : acc;
+    const userAnswer = userAnswers[index] || [];
+    return arraysMatch(userAnswer, q.correctAnswers) ? acc + 1 : acc;
   }, 0);
 
   return (
@@ -81,9 +96,11 @@ export default function PollCard({ drink }: PollCardProps) {
               <button
                 key={option}
                 className={`px-4 py-2 rounded-full border ${
-                  userAnswers[currentQuestionIndex] === option ? "bg-primaryRed text-white" : "bg-gray-200"
+                  (userAnswers[currentQuestionIndex] || []).includes(option)
+                    ? "bg-primaryRed text-white"
+                    : "bg-gray-200"
                 }`}
-                onClick={() => handleAnswer(option)}
+                onClick={() => toggleOption(option)}
               >
                 {option}
               </button>
@@ -94,7 +111,7 @@ export default function PollCard({ drink }: PollCardProps) {
             <button
               className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition disabled:opacity-50"
               onClick={handleNext}
-              disabled={!userAnswers[currentQuestionIndex]}
+              disabled={(userAnswers[currentQuestionIndex] || []).length === 0}
             >
               Next
             </button>
@@ -102,7 +119,7 @@ export default function PollCard({ drink }: PollCardProps) {
             <button
               className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition disabled:opacity-50"
               onClick={handleSubmit}
-              disabled={!userAnswers[currentQuestionIndex]}
+              disabled={(userAnswers[currentQuestionIndex] || []).length === 0}
             >
               Submit
             </button>
@@ -113,7 +130,7 @@ export default function PollCard({ drink }: PollCardProps) {
           <h3 className="text-xl font-bold mb-4">Results</h3>
           <p className="text-lg mb-6">
             You got {score} out of {questions.length} correct!
-        </p>
+          </p>
           {questions.map((q, index) => (
             <div key={q.id} className="mb-4">
               <p className="font-semibold">{q.questionText}</p>
@@ -121,14 +138,18 @@ export default function PollCard({ drink }: PollCardProps) {
                 Your answer:{" "}
                 <span
                   className={
-                    userAnswers[index] === q.correctAnswer ? "text-green-600" : "text-red-600"
+                    arraysMatch(userAnswers[index] || [], q.correctAnswers)
+                      ? "text-green-600"
+                      : "text-red-600"
                   }
                 >
-                  {userAnswers[index]}
+                  {(userAnswers[index] || []).join(", ") || "No answer"}
                 </span>
               </p>
-              {userAnswers[index] !== q.correctAnswer && (
-                <p className="text-sm text-gray-600">Correct answer: {q.correctAnswer}</p>
+              {!arraysMatch(userAnswers[index] || [], q.correctAnswers) && (
+                <p className="text-sm text-gray-600">
+                  Correct answer: {q.correctAnswers.join(", ")}
+                </p>
               )}
             </div>
           ))}
