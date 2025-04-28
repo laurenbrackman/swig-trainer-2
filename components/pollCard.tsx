@@ -87,6 +87,10 @@ export default function PollCard({ drink }: PollCardProps) {
     setCurrentQuestionIndex((prev) => prev + 1);
   }
 
+  function handleBack() {
+    setCurrentQuestionIndex((prev) => Math.max(prev - 1, 0));
+  }  
+
   function handleSubmit() {
     setUserAnswers((prev) => ({
       ...prev,
@@ -123,21 +127,34 @@ export default function PollCard({ drink }: PollCardProps) {
             ))}
           </div>
 
-          {currentQuestionIndex < questions.length - 1 ? (
-            <button
-            className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition"
-            onClick={handleNext}
-          >
-            Next
-          </button>
-          ) : (
-            <button
-  className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition"
-  onClick={handleSubmit}
->
-  Submit
-</button>
-          )}
+          <div className="flex justify-between items-center mt-6">
+    {currentQuestionIndex > 0 ? (
+    <button
+      className="px-6 py-3 bg-background text-foreground rounded-full shadow-md hover:brightness-95 transition"
+      onClick={handleBack}
+    >
+      Back
+    </button>
+  ) : (
+    <div className="w-[96px]" /> // ← Same width as a button to reserve space!
+  )}
+
+  {currentQuestionIndex < questions.length - 1 ? (
+    <button
+      className="px-6 py-3 bg-primaryRed text-white rounded-full shadow-md hover:brightness-110 transition"
+      onClick={handleNext}
+    >
+      Next
+    </button>
+  ) : (
+    <button
+      className="px-6 py-3 bg-primaryRed text-white rounded-full shadow-md hover:brightness-110 transition"
+      onClick={handleSubmit}
+    >
+      Submit
+    </button>
+  )}
+</div>
         </>
       ) : (
         <div className="mt-6">
