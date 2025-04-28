@@ -57,6 +57,8 @@ export const availableSyrupTypes = [
     "Sparkling Water",
     "Cocoa",
     "Ice",
+    "Reviver",
+    "SF Reviver"
   ];
 // Helper: generate cream question
 export function generateCreamQuestion(drink: Drink) {
