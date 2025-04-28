@@ -68,11 +68,18 @@ export default function PollCard({ drink }: PollCardProps) {
   function toggleOption(option: string) {
     setUserAnswers((prev) => {
       const currentSelections = prev[currentQuestionIndex] || [];
+  
+      let newSelections: string[];
+  
+      if (currentSelections.includes(option)) {
+        newSelections = currentSelections.filter((o) => o !== option);
+      } else {
+        newSelections = [...currentSelections.filter((o) => o !== "None"), option];
+      }
+  
       return {
         ...prev,
-        [currentQuestionIndex]: currentSelections.includes(option)
-          ? currentSelections.filter((o) => o !== option)
-          : [...currentSelections, option],
+        [currentQuestionIndex]: newSelections,
       };
     });
   }
@@ -136,7 +143,7 @@ export default function PollCard({ drink }: PollCardProps) {
       Back
     </button>
   ) : (
-    <div className="w-[96px]" /> // ← Same width as a button to reserve space!
+    <div className="w-[96px]" />
   )}
 
   {currentQuestionIndex < questions.length - 1 ? (
