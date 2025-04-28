@@ -78,7 +78,7 @@ export function generateSyrupQuestion(drink: Drink) {
   
     return {
       id: 3,
-      questionText: "Select all the syrups used in this drink:",
+      questionText: "Which flavors are included?",
       options: availableSyrupTypes,
       correctAnswers: correctSyrups,
       field: "syrups",
@@ -137,7 +137,7 @@ export function generatePureeQuestions(drink: Drink) {
 
   return {
     id: 4,
-    questionText: "Select all the purees used in this drink:",
+    questionText: "Which purees are included?",
     options: availablePureeTypes,
     correctAnswers: correctPurees,
     field: "purees",
@@ -151,7 +151,7 @@ export function generateCreamQuestion(drink: Drink) {
 
   return {
     id: 5,
-    questionText: "Which cream is used?",
+    questionText: "Which creams are included?",
     options: availableCreamTypes,
     correctAnswers: [correctCream],
     field: "cream",
