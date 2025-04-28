@@ -1,8 +1,8 @@
 import { Drink } from "@/utils/drinks";
 
 // Constant options
-export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half", "None"];
-export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree", "None"];
+export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half"];
+export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree"];
 export const availableSyrupTypes = [
     "Watermelon",
     "Vanilla",
@@ -37,7 +37,6 @@ export const availableSyrupTypes = [
     "SF Mango",
     "SF Vanilla",
     "SF Coconut",
-    "None"
   ];
   
   export const availableBases = [
@@ -60,22 +59,7 @@ export const availableSyrupTypes = [
     "Reviver",
     "SF Reviver"
   ];
-// Helper: generate cream question
-export function generateCreamQuestion(drink: Drink) {
-  const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== "" 
-    ? drink.ingredients.cream 
-    : "None";
 
-  return {
-    id: 1,
-    questionText: "Which cream is used?",
-    options: availableCreamTypes,
-    correctAnswers: [correctCream],
-    field: "cream",
-  };
-}
-
-// Helper: generate base question
 export function generateBaseQuestion(drink: Drink) {
   const correctBase = drink.ingredients.base || "None";
 
@@ -114,5 +98,19 @@ export function generatePureeQuestions(drink: Drink) {
     options: availablePureeTypes,
     correctAnswers: correctPurees,
     field: "purees",
+  };
+}
+
+export function generateCreamQuestion(drink: Drink) {
+  const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== "" 
+    ? drink.ingredients.cream 
+    : "None";
+
+  return {
+    id: 5,
+    questionText: "Which cream is used?",
+    options: availableCreamTypes,
+    correctAnswers: [correctCream],
+    field: "cream",
   };
 }

@@ -40,10 +40,10 @@ function generateQuestions(drink: Drink): Question[] {
       correctAnswers: [drink.getCupType()],
       field: "cup",
     },
-    generateCreamQuestion(drink),
     generateBaseQuestion(drink),
     generateSyrupQuestion(drink),
     generatePureeQuestions(drink),
+    generateCreamQuestion(drink),
   ];
 }
 
@@ -74,10 +74,22 @@ export default function PollCard({ drink }: PollCardProps) {
   }
 
   function handleNext() {
+    setUserAnswers((prev) => ({
+      ...prev,
+      [currentQuestionIndex]: (prev[currentQuestionIndex] || []).length > 0
+        ? prev[currentQuestionIndex]
+        : ["None"],
+    }));
     setCurrentQuestionIndex((prev) => prev + 1);
   }
 
   function handleSubmit() {
+    setUserAnswers((prev) => ({
+      ...prev,
+      [currentQuestionIndex]: (prev[currentQuestionIndex] || []).length > 0
+        ? prev[currentQuestionIndex]
+        : ["None"],
+    }));
     setSubmitted(true);
   }
 
@@ -109,20 +121,18 @@ export default function PollCard({ drink }: PollCardProps) {
 
           {currentQuestionIndex < questions.length - 1 ? (
             <button
-              className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition disabled:opacity-50"
-              onClick={handleNext}
-              disabled={(userAnswers[currentQuestionIndex] || []).length === 0}
-            >
-              Next
-            </button>
+            className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition"
+            onClick={handleNext}
+          >
+            Next
+          </button>
           ) : (
             <button
-              className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition disabled:opacity-50"
-              onClick={handleSubmit}
-              disabled={(userAnswers[currentQuestionIndex] || []).length === 0}
-            >
-              Submit
-            </button>
+  className="mt-6 px-6 py-2 bg-primaryRed text-white rounded-lg hover:brightness-90 transition"
+  onClick={handleSubmit}
+>
+  Submit
+</button>
           )}
         </>
       ) : (
