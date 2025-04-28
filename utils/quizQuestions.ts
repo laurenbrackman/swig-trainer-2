@@ -45,9 +45,7 @@ export const availableSyrupTypes = [
     "Coke",
     "Diet Coke",
     "Sprite",
-    "Sprite Zero",
     "Mountain Dew",
-    "Diet Mountain Dew",
     "Root Beer",
     "Pepsi",
     "Fresca",
@@ -86,6 +84,51 @@ export function generateSyrupQuestion(drink: Drink) {
       field: "syrups",
     };
 }
+
+export function generateFruitsQuestion(drink: Drink) {
+  const correctFruits = drink.ingredients.fruits.length > 0
+    ? drink.ingredients.fruits
+    : ["None"];
+
+  const availableFruits = [
+    "Fresh Lime",
+    "Fresh Lemon",
+    "Fresh Orange",
+  ];
+
+  return {
+    id: 6,
+    questionText: "Which fruits are included?",
+    options: availableFruits,
+    correctAnswers: correctFruits,
+    field: "fruits",
+  };
+}
+
+export function generateExtrasQuestion(drink: Drink) {
+  const correctExtras = drink.ingredients.extras.length > 0
+    ? drink.ingredients.extras
+    : ["None"];
+
+  const availableExtras = [
+    "Passion Fruit Pearls",
+    "Strawberry Pearls",
+    "Gummy Sharks",
+    "Frozen Mangos",
+    "Frozen Strawberries",
+    "Reviver Concentrate",
+    "SF Reviver Concentrate"
+  ];
+
+  return {
+    id: 7,
+    questionText: "Which extras are included?",
+    options: availableExtras,
+    correctAnswers: correctExtras,
+    field: "extras",
+  };
+}
+
 
 export function generatePureeQuestions(drink: Drink) {
     const correctPurees = drink.ingredients.purees.length > 0

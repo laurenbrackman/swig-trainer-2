@@ -7,6 +7,8 @@ import {
   generateBaseQuestion,
   generateSyrupQuestion,
   generatePureeQuestions,
+  generateFruitsQuestion,
+  generateExtrasQuestion,
 } from "@/utils/quizQuestions";
 
 type PollCardProps = {
@@ -42,8 +44,10 @@ function generateQuestions(drink: Drink): Question[] {
     },
     generateBaseQuestion(drink),
     generateSyrupQuestion(drink),
+    generateFruitsQuestion(drink),
     generatePureeQuestions(drink),
     generateCreamQuestion(drink),
+    generateExtrasQuestion(drink)
   ];
 }
 
@@ -99,7 +103,7 @@ export default function PollCard({ drink }: PollCardProps) {
   }, 0);
 
   return (
-    <div className="border rounded-lg p-6 shadow-md mt-4 text-center">
+    <div className="bg-mint rounded-lg p-6 shadow-md mt-4 text-center">
       {!submitted ? (
         <>
           <h3 className="mt-6 text-lg font-semibold">{currentQuestion.questionText}</h3>
@@ -107,11 +111,11 @@ export default function PollCard({ drink }: PollCardProps) {
             {currentQuestion.options.map((option) => (
               <button
                 key={option}
-                className={`px-4 py-2 rounded-full border ${
+                className={`px-4 py-2 rounded-full ${
                   (userAnswers[currentQuestionIndex] || []).includes(option)
                     ? "bg-primaryRed text-white"
-                    : "bg-gray-200 dark:bg-gray-700 dark:text-white"
-                }`}
+                    : "bg-background text-foreground dark:bg-gray-700 dark:text-white"
+                } shadow-sm transition`}
                 onClick={() => toggleOption(option)}
               >
                 {option}
