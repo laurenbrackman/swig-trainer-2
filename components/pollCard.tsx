@@ -98,7 +98,7 @@ export default function PollCard({ drink }: PollCardProps) {
                 className={`px-4 py-2 rounded-full border ${
                   (userAnswers[currentQuestionIndex] || []).includes(option)
                     ? "bg-primaryRed text-white"
-                    : "bg-gray-200"
+                    : "bg-gray-200 dark:bg-gray-700 dark:text-white"
                 }`}
                 onClick={() => toggleOption(option)}
               >
