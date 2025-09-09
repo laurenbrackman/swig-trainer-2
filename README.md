@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Swig Dirty Soda Ratio Trainer 🥤
 
-## Getting Started
+This is a training web app designed to help team members at **Swig** practice building dirty soda recipes with the correct ratios.  
 
-First, run the development server:
+## Demo
+👉 [Live App](https://swig-trainer-lou7bk9kc-laurenbrackmans-projects.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Interactive practice for building dirty soda drinks
+- Ratio-based feedback to improve accuracy and consistency
+- JSON-based recipe data for flexible scaling and easy updates
+- Simple, responsive UI for quick use in training environments
+- Hosted on Vercel for easy deployment and access
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
+- **Frontend:** React + TypeScript  
+- **Styling:** CSS  
+- **Data:** JSON recipe dataset  
+- **Deployment:** Vercel  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lessons Learned
+- Structuring a React app in TypeScript for reliability and maintainability  
+- Managing state to provide real-time ratio feedback  
+- Using JSON to store and scale recipe data  
+- Deploying production-ready apps with Vercel  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+This project was created as a practical tool for training new employees at Swig. It combines my experience in web development with real-world needs from my time as a shift lead.  
