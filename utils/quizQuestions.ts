@@ -1,6 +1,5 @@
 import { Drink } from "@/utils/drinks";
 
-// Constant options
 export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half"];
 export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree"];
 export const availableSyrupTypes = [
@@ -53,7 +52,6 @@ export const availableSyrupTypes = [
     "Water",
     "Sparkling Water",
     "Cocoa",
-    "Ice",
     "Reviver",
     "SF Reviver"
   ];
@@ -70,7 +68,6 @@ export function generateBaseQuestion(drink: Drink) {
   };
 }
 
-// Helper: generate syrup questions
 export function generateSyrupQuestion(drink: Drink) {
     const correctSyrups = drink.ingredients.syrups.length > 0
       ? drink.ingredients.syrups
