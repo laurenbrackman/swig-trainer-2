@@ -491,8 +491,8 @@
     "topOff":"Sprite", 
     "syrups": ["Grapefruit", "Pineapple"], 
     "cream": "Coconut Cream", 
-    "fruits": ["Mango"], 
-    "purees": [], 
+    "fruits": [], 
+    "purees": ["Mango Puree"], 
     "extras": ["Reviver Concentrate"] 
   } 
 },

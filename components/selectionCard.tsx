@@ -15,7 +15,6 @@ export default function SelectionCard({ selections, questions }: SelectionCardPr
 
   return (
     <div className="text-sm text-center my-2">
-      <span className="font-semibold mr-2">Your Selections:</span>
       <div className="inline-flex flex-wrap gap-2 justify-center">
         {chips.map(({ opt, display }) => (
           <div key={opt} className="inline-flex items-center gap-1 px-3 text-sm">
@@ -23,11 +22,11 @@ export default function SelectionCard({ selections, questions }: SelectionCardPr
               <img
                 src={`/images/${opt.toLowerCase()}.png`}
                 alt={opt}
-                className="w-6 h-6 object-contain"
+                className="w-20 object-contain"
                 onError={(e) => (e.currentTarget.style.display = "none")}
               />
             )}
-            {(display === "text" || display === "both") && <span>{opt}</span>}
+            {(display === "text") && <span>{opt}</span>}
           </div>
         ))}
       </div>

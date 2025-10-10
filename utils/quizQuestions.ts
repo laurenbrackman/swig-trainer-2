@@ -63,7 +63,8 @@ export const availableSyrupTypes = [
     "Sparkling Water",
     "Cocoa",
     "Reviver",
-    "SF Reviver"
+    "SF Reviver",
+    "Ice"
   ];
 
 function generateCupQuestion(cup: string) {
@@ -81,11 +82,24 @@ function generateBaseQuestion(drink: Drink) {
   const correctBase = drink.ingredients.base || "None";
 
   return {
-    id: 2,
+    id: 1,
     questionText: "What is the base of the drink?",
     options: availableBases,
     correctAnswers: [correctBase],
     field: "base",
+    display: 'image' as const,
+  };
+}
+
+function generateTopOffQuestion(drink: Drink) {
+  const correctTopOff = drink.ingredients.topOff || "None";
+
+  return {
+    id: 2,
+    questionText: "What is the top-off of the drink?",
+    options: availableBases,
+    correctAnswers: [correctTopOff],
+    field: "topOff",
     display: 'image' as const,
   };
 }
@@ -186,6 +200,7 @@ export function generateQuestions(drink: Drink): Question[] {
   return [
     generateCupQuestion(drink.getCupType()),
     generateBaseQuestion(drink),
+    generateTopOffQuestion(drink),
     generateSyrupQuestion(drink),
     generateFruitsQuestion(drink),
     generatePureeQuestions(drink),
