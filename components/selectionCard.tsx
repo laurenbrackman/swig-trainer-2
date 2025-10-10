@@ -1,31 +1,33 @@
+import { Question } from "@/utils/quizQuestions";
+
 type SelectionCardProps = {
   selections: Record<number, string[]>;
-  questions: { id: number; questionText: string; options: string[] }[];
+  questions: Question[];
 };
 
-export default function SelectionCard({ selections }: SelectionCardProps) {
-  const chosen: string[] = Object.values(selections)
-    .flat()
-    .filter((v) => v && v !== "None");
+export default function SelectionCard({ selections, questions }: SelectionCardProps) {
+  const chips = questions.flatMap((q, idx) => {
+    const chosen = (selections[idx] || []).filter((v) => v && v !== "None");
+    return chosen.map((opt) => ({ opt, display: q.display ?? "text" }));
+  });
 
-  if (chosen.length === 0) return null;
+  if (chips.length === 0) return null;
 
   return (
     <div className="text-sm text-center my-2">
       <span className="font-semibold mr-2">Your Selections:</span>
       <div className="inline-flex flex-wrap gap-2 justify-center">
-        {chosen.map((opt) => (
-          <div
-            key={opt}
-            className="inline-flex items-center gap-1 px-3 text-sm"
-          >
-            <img
-              src={`/images/${opt.toLowerCase()}.png`}
-              alt={opt}
-              className="w-6 h-6 object-contain"
-              onError={(e) => (e.currentTarget.style.display = "none")}
-            />
-            <span>{opt}</span>
+        {chips.map(({ opt, display }) => (
+          <div key={opt} className="inline-flex items-center gap-1 px-3 text-sm">
+            {(display === "image" || display === "both") && (
+              <img
+                src={`/images/${opt.toLowerCase()}.png`}
+                alt={opt}
+                className="w-6 h-6 object-contain"
+                onError={(e) => (e.currentTarget.style.display = "none")}
+              />
+            )}
+            {(display === "text" || display === "both") && <span>{opt}</span>}
           </div>
         ))}
       </div>

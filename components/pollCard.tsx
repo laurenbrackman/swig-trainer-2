@@ -27,9 +27,9 @@ export default function PollCard({ drink }: PollCardProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, string[]>>({});
   const [submitted, setSubmitted] = useState(false);
-
   const questions: Question[] = generateQuestions(drink);
   const currentQuestion = questions[currentQuestionIndex];
+  const currentDisplay = currentQuestion.display ?? "text";
 
   useEffect(() => {
     setCurrentQuestionIndex(0);
@@ -95,18 +95,28 @@ export default function PollCard({ drink }: PollCardProps) {
           <h3 className="mt-6 text-lg font-semibold">{currentQuestion.questionText}</h3>
           <div className="flex flex-wrap justify-center gap-2 mt-4">
             {currentQuestion.options.map((option) => (
-              <button
-                key={option}
-                className={`px-4 py-2 rounded-full ${
-                  (userAnswers[currentQuestionIndex] || []).includes(option)
-                    ? "bg-primaryRed text-white"
-                    : "bg-background text-foreground dark:bg-gray-700 dark:text-white"
-                } shadow-sm transition ${[1,2].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
-                onClick={() => toggleOption(option)}
-              >
-                {[0,1,2,3,5,6].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="w-20 mx-auto"/> : option}             
-                {![1,3,4,6].includes(currentQuestionIndex) ? option : ""}
-              </button>
+<button
+  key={option}
+  className={`px-4 py-2 rounded-full ${
+    (userAnswers[currentQuestionIndex] || []).includes(option)
+      ? "bg-primaryRed text-white"
+      : "bg-background text-foreground dark:bg-gray-700 dark:text-white"
+  } shadow-sm transition ${[1, 2].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
+  onClick={() => toggleOption(option)}
+>
+  {(currentDisplay === "image" || currentDisplay === "both") && (
+    <img
+      src={`/images/${option.toLowerCase()}.png`}
+      alt={option}
+      className="w-20 mx-auto"
+      onError={(e) => (e.currentTarget.style.display = "none")}
+    />
+  )}
+
+  {(currentDisplay === "text" || currentDisplay === "both") && (
+    <span>{option}</span>
+  )}
+</button>
             ))}
           </div>
           <div className="flex justify-between items-center mt-6">
