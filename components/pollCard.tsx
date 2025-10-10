@@ -126,11 +126,10 @@ export default function PollCard({ drink }: PollCardProps) {
                   (userAnswers[currentQuestionIndex] || []).includes(option)
                     ? "bg-primaryRed text-white"
                     : "bg-background text-foreground dark:bg-gray-700 dark:text-white"
-                } shadow-sm transition`}
+                } shadow-sm transition ${[1,2].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
                 onClick={() => toggleOption(option)}
               >
-                {[2].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="inline w-20"/>:""}        
-                {[0,1,3,5,6].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="inline-block w-20"/> : option}             
+                {[0,1,2,3,5,6].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="inline-block w-20"/> : option}             
               </button>
             ))}
           </div>
