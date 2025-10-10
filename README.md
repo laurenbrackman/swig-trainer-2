@@ -3,7 +3,7 @@
 This is a training web app designed to help team members at **Swig** practice building dirty soda recipes with the correct ratios.  
 
 ## Demo
-👉 [Live App](https://swig-trainer-lou7bk9kc-laurenbrackmans-projects.vercel.app/)
+👉 [Live App]([https://swig-trainer-dg2eskrgv-laurenbrackmans-projects.vercel.app])
 
 ## Features
 - Interactive practice for building dirty soda drinks
