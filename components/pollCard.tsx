@@ -9,20 +9,13 @@ import {
   generatePureeQuestions,
   generateFruitsQuestion,
   generateExtrasQuestion,
+  Question,
 } from "@/utils/quizQuestions";
 
 import SelectionCard from "@/components/selectionCard";
 
 type PollCardProps = {
   drink: Drink;
-};
-
-type Question = {
-  id: number;
-  questionText: string;
-  options: string[];
-  correctAnswers: string[];
-  field: string;
 };
 
 function arraysMatch(arr1: string[], arr2: string[]) {
@@ -43,6 +36,7 @@ function generateQuestions(drink: Drink): Question[] {
       options: ["Foam", "Plastic","Kids", "Paper"],
       correctAnswers: [drink.getCupType()],
       field: "cup",
+      display: "image",
     },
     generateBaseQuestion(drink),
     generateSyrupQuestion(drink),

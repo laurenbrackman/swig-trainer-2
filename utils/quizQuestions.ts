@@ -1,5 +1,16 @@
 import { Drink } from "@/utils/drinks";
 
+type DisplayMode = 'image' | 'text' | 'both';
+
+export type Question = {
+  id: number;
+  questionText: string;
+  options: string[];
+  correctAnswers: string[];
+  field: string;
+  display?: DisplayMode;
+};
+
 export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half"];
 export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree"];
 export const availableSyrupTypes = [
@@ -64,6 +75,7 @@ export function generateBaseQuestion(drink: Drink) {
     options: availableBases,
     correctAnswers: [correctBase],
     field: "base",
+    display: 'image' as const,
   };
 }
 
@@ -78,6 +90,7 @@ export function generateSyrupQuestion(drink: Drink) {
       options: availableSyrupTypes,
       correctAnswers: correctSyrups,
       field: "syrups",
+      display: 'both' as const,
     };
 }
 
@@ -98,6 +111,7 @@ export function generateFruitsQuestion(drink: Drink) {
     options: availableFruits,
     correctAnswers: correctFruits,
     field: "fruits",
+    display: 'image' as const,
   };
 }
 
@@ -122,6 +136,7 @@ export function generateExtrasQuestion(drink: Drink) {
     options: availableExtras,
     correctAnswers: correctExtras,
     field: "extras",
+    display: 'image' as const,
   };
 }
 
@@ -137,6 +152,7 @@ export function generatePureeQuestions(drink: Drink) {
     options: availablePureeTypes,
     correctAnswers: correctPurees,
     field: "purees",
+    display: 'text' as const,
   };
 }
 
@@ -151,5 +167,6 @@ export function generateCreamQuestion(drink: Drink) {
     options: availableCreamTypes,
     correctAnswers: [correctCream],
     field: "cream",
+    display: 'both' as const,
   };
 }
