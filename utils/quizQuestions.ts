@@ -66,7 +66,7 @@ export const availableSyrupTypes = [
     "SF Reviver"
   ];
 
-export function generateCupQuestion(cup: string) {
+function generateCupQuestion(cup: string) {
     return {
       id: 0,
       questionText: "What type of cup is needed?",
@@ -77,7 +77,7 @@ export function generateCupQuestion(cup: string) {
     };
 }
 
-export function generateBaseQuestion(drink: Drink) {
+function generateBaseQuestion(drink: Drink) {
   const correctBase = drink.ingredients.base || "None";
 
   return {
@@ -90,7 +90,7 @@ export function generateBaseQuestion(drink: Drink) {
   };
 }
 
-export function generateSyrupQuestion(drink: Drink) {
+function generateSyrupQuestion(drink: Drink) {
     const correctSyrups = drink.ingredients.syrups.length > 0
       ? drink.ingredients.syrups
       : ["None"];
@@ -105,7 +105,7 @@ export function generateSyrupQuestion(drink: Drink) {
     };
 }
 
-export function generateFruitsQuestion(drink: Drink) {
+function generateFruitsQuestion(drink: Drink) {
   const correctFruits = drink.ingredients.fruits.length > 0
     ? drink.ingredients.fruits
     : ["None"];
@@ -126,7 +126,7 @@ export function generateFruitsQuestion(drink: Drink) {
   };
 }
 
-export function generateExtrasQuestion(drink: Drink) {
+function generateExtrasQuestion(drink: Drink) {
   const correctExtras = drink.ingredients.extras.length > 0
     ? drink.ingredients.extras
     : ["None"];
@@ -152,7 +152,7 @@ export function generateExtrasQuestion(drink: Drink) {
 }
 
 
-export function generatePureeQuestions(drink: Drink) {
+function generatePureeQuestions(drink: Drink) {
     const correctPurees = drink.ingredients.purees.length > 0
     ? drink.ingredients.purees
     : ["None"];
@@ -167,7 +167,7 @@ export function generatePureeQuestions(drink: Drink) {
   };
 }
 
-export function generateCreamQuestion(drink: Drink) {
+function generateCreamQuestion(drink: Drink) {
   const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== "" 
     ? drink.ingredients.cream 
     : "None";
@@ -180,4 +180,16 @@ export function generateCreamQuestion(drink: Drink) {
     field: "cream",
     display: 'both' as const,
   };
+}
+
+export function generateQuestions(drink: Drink): Question[] {
+  return [
+    generateCupQuestion(drink.getCupType()),
+    generateBaseQuestion(drink),
+    generateSyrupQuestion(drink),
+    generateFruitsQuestion(drink),
+    generatePureeQuestions(drink),
+    generateCreamQuestion(drink),
+    generateExtrasQuestion(drink)
+  ];
 }

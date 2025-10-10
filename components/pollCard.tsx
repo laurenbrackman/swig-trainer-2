@@ -3,14 +3,8 @@
 import { useState, useEffect } from "react";
 import { Drink } from "@/utils/drinks";
 import {
-  generateCreamQuestion,
-  generateBaseQuestion,
-  generateSyrupQuestion,
-  generatePureeQuestions,
-  generateFruitsQuestion,
-  generateExtrasQuestion,
+  generateQuestions,
   Question,
-  generateCupQuestion,
 } from "@/utils/quizQuestions";
 
 import SelectionCard from "@/components/selectionCard";
@@ -27,18 +21,6 @@ function arraysMatch(arr1: string[], arr2: string[]) {
     if (!set2.has(item)) return false;
   }
   return true;
-}
-
-function generateQuestions(drink: Drink): Question[] {
-  return [
-    generateCupQuestion(drink.getCupType()),
-    generateBaseQuestion(drink),
-    generateSyrupQuestion(drink),
-    generateFruitsQuestion(drink),
-    generatePureeQuestions(drink),
-    generateCreamQuestion(drink),
-    generateExtrasQuestion(drink)
-  ];
 }
 
 export default function PollCard({ drink }: PollCardProps) {
