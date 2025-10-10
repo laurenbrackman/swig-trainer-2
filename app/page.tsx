@@ -4,7 +4,6 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import DrinkCard from "@/components/drinkCard";
 import PollCard from "@/components/pollCard";
-import SelectionCard from "@/components/selectionCard";
 import { useState } from "react";
 import { pickExactDrink } from "../utils/drinkGenerator";
 import { Drink } from "@/utils/drinks";
@@ -22,7 +21,6 @@ export default function Home() {
       <Header handleGenerateDrink={handleGenerateDrink}/>
       <main className="flex flex-col items-center p-8">
       {drink && <DrinkCard drink={drink} />}
-      <SelectionCard />
       {drink && <PollCard drink={drink} />}
       </main>
       <Footer />

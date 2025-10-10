@@ -11,6 +11,8 @@ import {
   generateExtrasQuestion,
 } from "@/utils/quizQuestions";
 
+import SelectionCard from "@/components/selectionCard";
+
 type PollCardProps = {
   drink: Drink;
 };
@@ -115,6 +117,9 @@ export default function PollCard({ drink }: PollCardProps) {
 
   return (
     <div className="bg-mint rounded-lg p-6 shadow-md mt-4 text-center">
+      {!submitted && (
+        <SelectionCard selections={userAnswers} questions={questions} />
+      )}
       {!submitted ? (
         <>
           <h3 className="mt-6 text-lg font-semibold">{currentQuestion.questionText}</h3>
