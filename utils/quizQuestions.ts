@@ -67,6 +67,8 @@ export const availableSyrupTypes = [
     "Ice"
   ];
 
+  export const availableTopOffs = availableBases.slice(0, -1);
+
 function generateCupQuestion(cup: string) {
     return {
       id: 0,
@@ -97,7 +99,7 @@ function generateTopOffQuestion(drink: Drink) {
   return {
     id: 2,
     questionText: "What is the top-off of the drink?",
-    options: availableBases,
+    options: availableTopOffs,
     correctAnswers: [correctTopOff],
     field: "topOff",
     display: 'image' as const,
