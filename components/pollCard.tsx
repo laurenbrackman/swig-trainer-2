@@ -129,7 +129,7 @@ export default function PollCard({ drink }: PollCardProps) {
                 } shadow-sm transition`}
                 onClick={() => toggleOption(option)}
               >
-                {option}
+                {currentQuestionIndex === 0 ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="inline-block w-20 h-30"/> : option}             
               </button>
             ))}
           </div>
