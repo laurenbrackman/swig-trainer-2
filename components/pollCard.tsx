@@ -38,7 +38,7 @@ function generateQuestions(drink: Drink): Question[] {
     {
       id: 0,
       questionText: "What type of cup is needed?",
-      options: ["Foam", "Paper", "Plastic"],
+      options: ["Foam", "Paper", "Plastic","Kids"],
       correctAnswers: [drink.getCupType()],
       field: "cup",
     },
