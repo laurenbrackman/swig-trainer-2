@@ -17,7 +17,6 @@ export const availableSyrupTypes = [
     "Mango",
     "Hazelnut",
     "Guava",
-    "Apple",
     "Grapefruit",
     "Grape",
     "English Toffee",
