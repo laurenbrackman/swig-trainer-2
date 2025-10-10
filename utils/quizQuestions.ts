@@ -12,7 +12,7 @@ export type Question = {
 };
 
 export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half"];
-export const availablePureeTypes = ["Mango Puree", "Strawberry Puree", "Peach Puree", "Raspberry Puree"];
+export const availablePureeTypes = ["Peach Puree", "Mango Puree", "Raspberry Puree","Strawberry Puree"];
 export const availableSyrupTypes = [
     "Grape",
     "Mango",
@@ -177,7 +177,7 @@ function generatePureeQuestions(drink: Drink) {
     options: availablePureeTypes,
     correctAnswers: correctPurees,
     field: "purees",
-    display: 'text' as const,
+    display: 'image' as const,
   };
 }
 
