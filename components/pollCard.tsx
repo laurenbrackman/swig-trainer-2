@@ -129,11 +129,11 @@ export default function PollCard({ drink }: PollCardProps) {
                 } shadow-sm transition ${[1,2].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
                 onClick={() => toggleOption(option)}
               >
-                {[0,1,2,3,5,6].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="inline-block w-20"/> : option}             
+                {[0,1,2,3,5,6].includes(currentQuestionIndex) ? <img src={`/images/${option.toLowerCase()}.png`} alt={option} className="w-20 mx-auto"/> : option}             
+                {![1,3,4,6].includes(currentQuestionIndex) ? option : ""}
               </button>
             ))}
           </div>
-
           <div className="flex justify-between items-center mt-6">
     {currentQuestionIndex > 0 ? (
     <button
