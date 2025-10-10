@@ -10,6 +10,7 @@ import {
   generateFruitsQuestion,
   generateExtrasQuestion,
   Question,
+  generateCupQuestion,
 } from "@/utils/quizQuestions";
 
 import SelectionCard from "@/components/selectionCard";
@@ -30,14 +31,7 @@ function arraysMatch(arr1: string[], arr2: string[]) {
 
 function generateQuestions(drink: Drink): Question[] {
   return [
-    {
-      id: 0,
-      questionText: "What type of cup is needed?",
-      options: ["Foam", "Plastic","Kids", "Paper"],
-      correctAnswers: [drink.getCupType()],
-      field: "cup",
-      display: "image",
-    },
+    generateCupQuestion(drink.getCupType()),
     generateBaseQuestion(drink),
     generateSyrupQuestion(drink),
     generateFruitsQuestion(drink),

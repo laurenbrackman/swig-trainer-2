@@ -66,6 +66,17 @@ export const availableSyrupTypes = [
     "SF Reviver"
   ];
 
+export function generateCupQuestion(cup: string) {
+    return {
+      id: 0,
+      questionText: "What type of cup is needed?",
+      options: ["Foam", "Plastic","Kids", "Paper"],
+      correctAnswers: [cup],
+      field: "cup",
+      display: "both" as const,
+    };
+}
+
 export function generateBaseQuestion(drink: Drink) {
   const correctBase = drink.ingredients.base || "None";
 
