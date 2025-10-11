@@ -5,9 +5,10 @@ import NavButtons from "@/components/quiz/NavButtons";
 import QuestionPrompt from "@/components/quiz/QuestionPrompt";
 import ResultsList from "@/components/quiz/ResultsList";
 import { useQuizState } from "@/hooks/useQuizState";
+import { Drink } from "@/utils/drinks";
 
-export default function PollCard({ drink }: { drink: any }) {
-  const { idx, answers, submitted, questions, current, display, toggle, next, back, submit, setAnswers } = useQuizState(drink);
+export default function PollCard({ drink }: { drink: Drink }) {
+  const { idx, answers, submitted, questions, current, display, toggle, next, back, submit } = useQuizState(drink);
 
   const wide = [1, 2, 5].includes(idx);
 
