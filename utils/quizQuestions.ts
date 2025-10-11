@@ -1,4 +1,5 @@
 import { Drink } from "@/utils/drinks";
+import { ingredients } from "./ingredients";
 
 type DisplayMode = 'image' | 'text' | 'both';
 
@@ -11,70 +12,12 @@ export type Question = {
   display?: DisplayMode;
 };
 
-export const availableCreamTypes = ["Coconut Cream", "Vanilla Cream", "Half and Half"];
-export const availablePureeTypes = ["Peach Puree", "Mango Puree", "Raspberry Puree","Strawberry Puree"];
-export const availableSyrupTypes = [
-    "Grape",
-    "Mango",
-    "SF Mango",
-    "Watermelon",
-    "SF Watermelon",
-    "English Toffee",
-    "Passion Fruit",
-    "Guava",
-    "Strawberry",
-    "SF Strawberry",
-    "Cupcake",
-    "Cherry",
-    "Cranberry",
-    "Raspberry",
-    "SF Raspberry",
-    "Toasted Marshmallow",
-    "Blackberry",
-    "Grapefruit",
-    "Peach",
-    "SF Peach",
-    "Butterscotch",
-    "SF Pineapple",
-    "Pomegranate",
-    "Vanilla",
-    "SF Vanilla",
-    "Mojito Mint",
-    "Pineapple",
-    "Blue Raspberry",
-    "Coconut",
-    "SF Coconut",
-    "Hazelnut",
-    "Peppermint",
-  ];
-  
-  export const availableBases = [
-    "Dr. Pepper",
-    "Diet Dr. Pepper",
-    "Coke",
-    "Diet Coke",
-    "Sprite",
-    "Mountain Dew",
-    "Diet Mountain Dew",
-    "Root Beer",
-    "Pepsi",
-    "Fresca",
-    "Lemonade",
-    "Water",
-    "Sparkling Water",
-    "Cocoa",
-    "Reviver",
-    "SF Reviver",
-    "Ice"
-  ];
-
-  export const availableTopOffs = availableBases.slice(0, -1);
 
 function generateCupQuestion(cup: string) {
     return {
       id: 0,
       questionText: "What type of cup is needed?",
-      options: ["Foam", "Plastic","Kids", "Paper"],
+      options: ingredients.CupTypes,
       correctAnswers: [cup],
       field: "cup",
       display: "both" as const,
@@ -87,7 +30,7 @@ function generateBaseQuestion(drink: Drink) {
   return {
     id: 1,
     questionText: "What is the base of the drink?",
-    options: availableBases,
+    options: ingredients.Bases,
     correctAnswers: [correctBase],
     field: "base",
     display: 'image' as const,
@@ -100,7 +43,7 @@ function generateTopOffQuestion(drink: Drink) {
   return {
     id: 2,
     questionText: "What is the top-off of the drink?",
-    options: availableTopOffs,
+    options: ingredients.TopOffs,
     correctAnswers: [correctTopOff],
     field: "topOff",
     display: 'image' as const,
@@ -115,7 +58,7 @@ function generateSyrupQuestion(drink: Drink) {
     return {
       id: 3,
       questionText: "Which flavors are included?",
-      options: availableSyrupTypes,
+      options: ingredients.SyrupTypes,
       correctAnswers: correctSyrups,
       field: "syrups",
       display: 'both' as const,
@@ -127,16 +70,10 @@ function generateFruitsQuestion(drink: Drink) {
     ? drink.ingredients.fruits
     : ["None"];
 
-  const availableFruits = [
-    "Fresh Lime",
-    "Fresh Lemon",
-    "Fresh Orange",
-  ];
-
   return {
     id: 6,
     questionText: "Which fruits are included?",
-    options: availableFruits,
+    options: ingredients.Fruits,
     correctAnswers: correctFruits,
     field: "fruits",
     display: 'image' as const,
@@ -148,20 +85,10 @@ function generateExtrasQuestion(drink: Drink) {
     ? drink.ingredients.extras
     : ["None"];
 
-  const availableExtras = [
-    "Passion Fruit Pearls",
-    "Strawberry Pearls",
-    "Gummy Sharks",
-    "Frozen Mangos",
-    "Frozen Strawberries",
-    "Reviver Concentrate",
-    "SF Reviver Concentrate"
-  ];
-
   return {
     id: 7,
     questionText: "Which extras are included?",
-    options: availableExtras,
+    options: ingredients.Extras,
     correctAnswers: correctExtras,
     field: "extras",
     display: 'image' as const,
@@ -177,7 +104,7 @@ function generatePureeQuestions(drink: Drink) {
   return {
     id: 4,
     questionText: "Which purees are included?",
-    options: availablePureeTypes,
+    options: ingredients.PureeTypes,
     correctAnswers: correctPurees,
     field: "purees",
     display: 'image' as const,
@@ -192,7 +119,7 @@ function generateCreamQuestion(drink: Drink) {
   return {
     id: 5,
     questionText: "Which creams are included?",
-    options: availableCreamTypes,
+    options: ingredients.CreamTypes,
     correctAnswers: [correctCream],
     field: "cream",
     display: 'both' as const,

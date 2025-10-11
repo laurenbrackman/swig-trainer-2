@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import DrinkCard from "@/components/drinkCard";
 import PollCard from "@/components/pollCard";
 import { useState } from "react";
-import { pickExactDrink } from "../utils/drinkGenerator";
+import { pickExactDrink } from "../utils/randomDrinkGenerator";
 import { Drink } from "@/utils/drinks";
 
 export default function Home() {
