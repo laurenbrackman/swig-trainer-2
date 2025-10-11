@@ -50,19 +50,19 @@ function generateTopOffQuestion(drink: Drink) {
   };
 }
 
-function generateSyrupQuestion(drink: Drink) {
-    const correctSyrups = drink.ingredients.syrups.length > 0
-      ? drink.ingredients.syrups
-      : ["None"];
-  
-    return {
-      id: 3,
-      questionText: "Which flavors are included?",
-      options: ingredients.SyrupTypes,
-      correctAnswers: correctSyrups,
-      field: "syrups",
-      display: 'both' as const,
-    };
+function generatePureeQuestions(drink: Drink) {
+    const correctPurees = drink.ingredients.purees.length > 0
+    ? drink.ingredients.purees
+    : ["None"];
+
+  return {
+    id: 3,
+    questionText: "Which purees are included?",
+    options: ingredients.PureeTypes,
+    correctAnswers: correctPurees,
+    field: "purees",
+    display: 'image' as const,
+  };
 }
 
 function generateFruitsQuestion(drink: Drink) {
@@ -71,12 +71,42 @@ function generateFruitsQuestion(drink: Drink) {
     : ["None"];
 
   return {
-    id: 6,
+    id: 4,
     questionText: "Which fruits are included?",
     options: ingredients.Fruits,
     correctAnswers: correctFruits,
     field: "fruits",
     display: 'image' as const,
+  };
+}
+
+function generateSyrupQuestion(drink: Drink) {
+    const correctSyrups = drink.ingredients.syrups.length > 0
+      ? drink.ingredients.syrups
+      : ["None"];
+  
+    return {
+      id: 5,
+      questionText: "Which flavors are included?",
+      options: ingredients.SyrupTypes,
+      correctAnswers: correctSyrups,
+      field: "syrups",
+      display: 'both' as const,
+    };
+}
+
+function generateCreamQuestion(drink: Drink) {
+  const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== "" 
+    ? drink.ingredients.cream 
+    : "None";
+
+  return {
+    id: 6,
+    questionText: "Which creams are included?",
+    options: ingredients.CreamTypes,
+    correctAnswers: [correctCream],
+    field: "cream",
+    display: 'both' as const,
   };
 }
 
@@ -95,45 +125,14 @@ function generateExtrasQuestion(drink: Drink) {
   };
 }
 
-
-function generatePureeQuestions(drink: Drink) {
-    const correctPurees = drink.ingredients.purees.length > 0
-    ? drink.ingredients.purees
-    : ["None"];
-
-  return {
-    id: 4,
-    questionText: "Which purees are included?",
-    options: ingredients.PureeTypes,
-    correctAnswers: correctPurees,
-    field: "purees",
-    display: 'image' as const,
-  };
-}
-
-function generateCreamQuestion(drink: Drink) {
-  const correctCream = drink.ingredients.cream && drink.ingredients.cream.trim() !== "" 
-    ? drink.ingredients.cream 
-    : "None";
-
-  return {
-    id: 5,
-    questionText: "Which creams are included?",
-    options: ingredients.CreamTypes,
-    correctAnswers: [correctCream],
-    field: "cream",
-    display: 'both' as const,
-  };
-}
-
 export function generateQuestions(drink: Drink): Question[] {
   return [
     generateCupQuestion(drink.getCupType()),
     generateBaseQuestion(drink),
     generateTopOffQuestion(drink),
-    generateSyrupQuestion(drink),
-    generateFruitsQuestion(drink),
     generatePureeQuestions(drink),
+    generateFruitsQuestion(drink),
+    generateSyrupQuestion(drink),
     generateCreamQuestion(drink),
     generateExtrasQuestion(drink)
   ];

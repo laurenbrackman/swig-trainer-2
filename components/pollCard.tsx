@@ -101,7 +101,7 @@ export default function PollCard({ drink }: PollCardProps) {
     (userAnswers[currentQuestionIndex] || []).includes(option)
       ? "bg-primaryRed text-white"
       : "bg-background text-foreground dark:bg-gray-700 dark:text-white"
-  } shadow-sm transition ${[1, 2, 3].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
+  } shadow-sm transition ${[1, 2, 5].includes(currentQuestionIndex) ? "basis-1/6" : ""}`}
   onClick={() => toggleOption(option)}
 >
   {(currentDisplay === "image" || currentDisplay === "both") && (

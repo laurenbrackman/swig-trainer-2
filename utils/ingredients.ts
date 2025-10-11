@@ -40,6 +40,7 @@ const Bases = [
     "Diet Dr. Pepper",
     "Coke",
     "Diet Coke",
+    "Coke Zero",
     "Sprite",
     "Sprite Zero",
     "Mountain Dew",
@@ -50,9 +51,9 @@ const Bases = [
     "Lemonade",
     "Water",
     "Sparkling Water",
-    "Cocoa",
     "Reviver",
     "SF Reviver",
+    "Cocoa",
     "Ice"
   ];
 
