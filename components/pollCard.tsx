@@ -9,6 +9,7 @@ import {
 import { arraysMatch } from "@/utils/arraysMatch";
 
 import SelectionCard from "@/components/selectionCard";
+import QuestionPrompt from "./quiz/QuestionPrompt";
 
 type PollCardProps = {
   drink: Drink;
@@ -83,7 +84,7 @@ export default function PollCard({ drink }: PollCardProps) {
       )}
       {!submitted ? (
         <>
-          <h3 className="mt-6 text-lg font-semibold">{currentQuestion.questionText}</h3>
+          <QuestionPrompt text={currentQuestion.questionText} />
           <div className="flex flex-wrap justify-center gap-2 mt-4">
             {currentQuestion.options.map((option) => (
 <button
