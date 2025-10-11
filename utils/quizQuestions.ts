@@ -55,6 +55,7 @@ export const availableSyrupTypes = [
     "Diet Coke",
     "Sprite",
     "Mountain Dew",
+    "Diet Mountain Dew",
     "Root Beer",
     "Pepsi",
     "Fresca",
