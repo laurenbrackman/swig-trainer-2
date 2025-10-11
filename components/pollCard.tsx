@@ -10,6 +10,7 @@ import { arraysMatch } from "@/utils/arraysMatch";
 
 import SelectionCard from "@/components/selectionCard";
 import QuestionPrompt from "./quiz/QuestionPrompt";
+import ResultsList from "./quiz/ResultsList";
 
 type PollCardProps = {
   drink: Drink;
@@ -141,34 +142,7 @@ export default function PollCard({ drink }: PollCardProps) {
 </div>
         </>
       ) : (
-        <div className="mt-6">
-          <h3 className="text-xl font-bold mb-4">Results</h3>
-          <p className="text-lg mb-6">
-            You got {score} out of {questions.length} correct!
-          </p>
-          {questions.map((q, index) => (
-            <div key={q.id} className="mb-4">
-              <p className="font-semibold">{q.questionText}</p>
-              <p>
-                Your answer:{" "}
-                <span
-                  className={
-                    arraysMatch(userAnswers[index] || [], q.correctAnswers)
-                      ? "text-green-600"
-                      : "text-red-600"
-                  }
-                >
-                  {(userAnswers[index] || []).join(", ") || "No answer"}
-                </span>
-              </p>
-              {!arraysMatch(userAnswers[index] || [], q.correctAnswers) && (
-                <p className="text-sm text-gray-600">
-                  Correct answer: {q.correctAnswers.join(", ")}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
+        <ResultsList questions={questions} answers={userAnswers} />
       )}
     </div>
   );
