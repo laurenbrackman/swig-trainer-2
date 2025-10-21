@@ -61,7 +61,7 @@ const TopOffs = Bases.slice(0, -1);
 const Extras = [
     "Passion Fruit Pearls",
     "Strawberry Pearls",
-    "Gummy Sharks",
+    "Gummy Shark",
     "Frozen Mangos",
     "Frozen Strawberries",
     "Reviver Concentrate",
