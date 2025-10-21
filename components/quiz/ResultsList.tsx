@@ -11,18 +11,22 @@ export default function ResultsList({ questions, answers }: Props) {
       {questions.map((q, i) => {
         const ua = answers[i] || [];
         const correct = arraysMatch(ua, q.correctAnswers);
-        return (
-          <div key={q.id} className="mb-4">
-            <p className="font-semibold">{q.questionText}</p>
-            <p>
-              Your answer:{" "}
-              <span className={correct ? "text-green-600" : "text-red-600"}>
-                {ua.join(", ") || "No answer"}
-              </span>
-            </p>
-            {!correct && <p className="text-sm text-gray-600">Correct answer: {q.correctAnswers.join(", ")}</p>}
-          </div>
-        );
+return (
+  !correct ? (
+    <div key={q.id} className="mb-4">
+      <p className="font-semibold">{q.questionText}</p>
+      <p>
+        Your answer:{" "}
+        <span className="text-red-600">
+          {ua.join(", ") || "No answer"}
+        </span>
+      </p>
+      <p className="text-sm text-gray-600">
+        Correct answer: {q.correctAnswers.join(", ")}
+      </p>
+    </div>
+  ) : null
+);
       })}
     </div>
   );
