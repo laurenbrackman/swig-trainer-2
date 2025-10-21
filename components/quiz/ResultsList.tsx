@@ -36,7 +36,7 @@ export default function ResultsList({ questions, answers, drink }: ResultsListPr
             <p className="font-medium">{q.questionText}</p>
 
             <div className="flex flex-wrap justify-center gap-2 mt-2">
-              {items.map(([opt, quantity]) => (
+              {items.map(([opt]) => (
                 <div
                   key={opt}
                   className={`inline-flex items-center gap-1 px-3 text-sm rounded ${
@@ -58,7 +58,6 @@ export default function ResultsList({ questions, answers, drink }: ResultsListPr
               ))}
             </div>
 
-            {/* Ratio feedback only for fields that have quantities */}
             {["syrups", "cream", "purees"].includes(q.field) && (
               <p className={`mt-1 text-sm ${ratioCorrect ? "text-green-600" : "text-red-600"}`}>
                 {ratioCorrect

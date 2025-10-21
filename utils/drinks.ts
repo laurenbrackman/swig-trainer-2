@@ -55,13 +55,13 @@ export class Drink {
         24: 7.5,
         32: 10,
       };
-      return blendedReviverRatios[size] / this.ingredients.syrups.length;
+      return blendedReviverRatios[size];
     }
     else if (this.type === "Soda") {
-      return ratios.syrup / this.ingredients.syrups.length;
+      return ratios.syrup;
     }
     else if (this.type === "Reviver" || this.type === "Refresher") {
-      return (ratios.syrup * 2) / this.ingredients.syrups.length;
+      return (ratios.syrup * 2);
     }
     else if (this.type === "Hot Cocoa") {
       return 1.5;

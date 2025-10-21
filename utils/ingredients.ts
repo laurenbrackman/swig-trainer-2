@@ -65,7 +65,8 @@ const Extras = [
     "Frozen Mangos",
     "Frozen Strawberries",
     "Reviver Concentrate",
-    "SF Reviver Concentrate"
+    "SF Reviver Concentrate",
+    "Hot Cocoa Mix"
   ];
 
 const Fruits = [
