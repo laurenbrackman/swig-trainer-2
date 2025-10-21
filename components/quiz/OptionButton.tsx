@@ -1,11 +1,14 @@
-import { useState } from "react";
+import React from "react";
 
 type Props = {
   option: string;
   active: boolean;
   display: "image" | "text" | "both";
   wide?: boolean;
+  quantity?: number;
+  hasQuantity?: boolean; // NEW
   onClick: () => void;
+  onQuantityChange?: (newQuantity: number) => void;
 };
 
 export default function OptionButton({
@@ -13,12 +16,13 @@ export default function OptionButton({
   active,
   display,
   wide,
+  quantity = 0,
+  hasQuantity = false,
   onClick,
+  onQuantityChange,
 }: Props) {
-  const [quantity, setQuantity] = useState(0);
-
-  const increase = () => setQuantity((q) => q + 1);
-  const decrease = () => setQuantity((q) => Math.max(0, q - 1));
+  const increase = () => hasQuantity && onQuantityChange?.(quantity + 0.5);
+  const decrease = () => hasQuantity && onQuantityChange?.(Math.max(0, quantity - 0.5));
 
   return (
     <div className={`flex flex-col items-center ${wide ? "basis-1/6" : ""}`}>
@@ -41,22 +45,23 @@ export default function OptionButton({
         {(display === "text" || display === "both") && <span>{option}</span>}
       </button>
 
-      {/* Quantity controls */}
-      <div className="flex items-center gap-2 mt-2">
-        <button
-          onClick={decrease}
-          className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded"
-        >
-          −
-        </button>
-        <span className="w-6 text-center">{quantity}</span>
-        <button
-          onClick={increase}
-          className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded"
-        >
-          +
-        </button>
-      </div>
+      {hasQuantity && (
+        <div className="flex items-center gap-2 mt-2">
+          <button
+            onClick={decrease}
+            className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded"
+          >
+            −
+          </button>
+          <span className="w-6 text-center">{quantity}</span>
+          <button
+            onClick={increase}
+            className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded"
+          >
+            +
+          </button>
+        </div>
+      )}
     </div>
   );
 }

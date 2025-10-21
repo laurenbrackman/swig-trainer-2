@@ -5,14 +5,14 @@ import Footer from "@/components/footer";
 import DrinkCard from "@/components/drinkCard";
 import PollCard from "@/components/pollCard";
 import { useState } from "react";
-import { pickExactDrink } from "../utils/randomDrinkGenerator";
+import { pickDrinkWithSize } from "../utils/randomDrinkGenerator";
 import { Drink } from "@/utils/drinks";
 
 export default function Home() {
   const [drink, setDrink] = useState<Drink | null>(null);
 
   function handleGenerateDrink() {
-    const generatedRecipe = pickExactDrink();
+    const generatedRecipe = pickDrinkWithSize();
     setDrink(generatedRecipe);
   }
 

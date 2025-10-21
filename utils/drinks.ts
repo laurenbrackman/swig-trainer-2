@@ -19,6 +19,11 @@ export class Drink {
     extras: string[];
   };
   size?: number;
+  ratios?: {
+    syrupRatio: number;
+    creamRatio: number;
+    pureeRatio: number;
+  };
 
   constructor(
     name: string,

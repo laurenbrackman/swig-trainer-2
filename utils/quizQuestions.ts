@@ -10,6 +10,8 @@ export type Question = {
   correctAnswers: string[];
   field: string;
   display?: DisplayMode;
+  hasQuantity?: boolean;
+  units?: string;
 };
 
 
@@ -21,6 +23,7 @@ function generateCupQuestion(cup: string) {
       correctAnswers: [cup],
       field: "cup",
       display: "both" as const,
+      hasQuantity: false,
     };
 }
 
@@ -34,6 +37,8 @@ function generateBaseQuestion(drink: Drink) {
     correctAnswers: [correctBase],
     field: "base",
     display: 'image' as const,
+    hasQuantity: false,
+    units: "ounces"
   };
 }
 
@@ -47,6 +52,8 @@ function generateTopOffQuestion(drink: Drink) {
     correctAnswers: [correctTopOff],
     field: "topOff",
     display: 'image' as const,
+    hasQuantity: false,
+    units: "ounces"
   };
 }
 
@@ -62,6 +69,8 @@ function generatePureeQuestions(drink: Drink) {
     correctAnswers: correctPurees,
     field: "purees",
     display: 'image' as const,
+    hasQuantity: true,
+    units: "pumps"
   };
 }
 
@@ -77,6 +86,8 @@ function generateFruitsQuestion(drink: Drink) {
     correctAnswers: correctFruits,
     field: "fruits",
     display: 'image' as const,
+    hasQuantity: true,
+    units: "wedges"
   };
 }
 
@@ -92,6 +103,8 @@ function generateSyrupQuestion(drink: Drink) {
       correctAnswers: correctSyrups,
       field: "syrups",
       display: 'both' as const,
+      hasQuantity: true,
+      units: "pumps"
     };
 }
 
@@ -107,6 +120,8 @@ function generateCreamQuestion(drink: Drink) {
     correctAnswers: [correctCream],
     field: "cream",
     display: 'both' as const,
+    hasQuantity: true,
+    units: "pumps"
   };
 }
 
@@ -122,6 +137,8 @@ function generateExtrasQuestion(drink: Drink) {
     correctAnswers: correctExtras,
     field: "extras",
     display: 'image' as const,
+    hasQuantity: false,
+    units: "scoops"
   };
 }
 

@@ -77,3 +77,5 @@ const Fruits = [
 const CupTypes = ["Foam", "Plastic","Kids", "Paper"]
 
 export const ingredients = {CupTypes,Fruits,Extras,Bases,CreamTypes,PureeTypes,SyrupTypes,TopOffs};
+export const availableSizes = [12, 16, 24, 32, 44];
+export const reviverSizes = [16,24,32];

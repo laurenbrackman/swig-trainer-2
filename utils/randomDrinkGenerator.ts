@@ -1,10 +1,8 @@
 import drinksData from "../drink.json";
 import { Drink } from "./drinks";
+import { availableSizes, reviverSizes } from "./ingredients";
 
-const availableSizes = [12, 16, 24, 32, 44];
-const reviverSizes = [16,24,32];
-
-export function pickMenuItem(): Drink {
+function pickMenuItem(): Drink {
   const randomDrinkData =
     drinksData[Math.floor(Math.random() * drinksData.length)];
   return new Drink(
@@ -14,23 +12,23 @@ export function pickMenuItem(): Drink {
   );
 }
 
-export function pickExactDrink(): Drink {
-  const drink = pickMenuItem();
+function pickRandomSize(drink : Drink): number {
   let sizes = availableSizes;
-  if(drink.type=="Reviver" || drink.type=="Blended Reviver"){
+  if (drink.type === "Reviver" || drink.type === "Blended Reviver") {
     sizes = reviverSizes;
   }
+
   let randomSize = sizes[Math.floor(Math.random() * sizes.length)];
-  
-  if(drink.type == "Hot Cocoa"){
-    randomSize = 12;
-  }
 
-  else if(drink.type == "Frozen Cocoa"){
-    randomSize = 24;
-  }
+  if (drink.type === "Hot Cocoa") randomSize = 12;
+  if (drink.type === "Frozen Cocoa") randomSize = 24;
 
-  (drink as any).size = randomSize;
-  drink.getRatios(randomSize);
+  return randomSize;
+}
+
+export function pickDrinkWithSize(): Drink {
+  const drink = pickMenuItem();
+  drink.size = pickRandomSize(drink)
+  drink.ratios = drink.getRatios(drink.size);
   return drink;
 }

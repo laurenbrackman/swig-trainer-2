@@ -1,4 +1,5 @@
 "use client";
+
 import SelectionCard from "@/components/selectionCard";
 import OptionButton from "@/components/quiz/OptionButton";
 import NavButtons from "@/components/quiz/NavButtons";
@@ -8,12 +9,26 @@ import { useQuizState } from "@/hooks/useQuizState";
 import { Drink } from "@/utils/drinks";
 
 export default function PollCard({ drink }: { drink: Drink }) {
-  const { idx, answers, submitted, questions, current, display, toggle, next, back, submit } = useQuizState(drink);
+  const {
+    idx,
+    answers,
+    submitted,
+    questions,
+    current,
+    display,
+    toggle,
+    setQuantity,
+    getQuantity,
+    next,
+    back,
+    submit,
+  } = useQuizState(drink);
 
   const wide = [1, 2, 5].includes(idx);
 
   return (
     <div className="bg-mint rounded-lg p-6 shadow-md mt-4 text-center">
+      {/* Show live selections */}
       {!submitted && <SelectionCard selections={answers} questions={questions} />}
 
       {!submitted ? (
@@ -25,10 +40,15 @@ export default function PollCard({ drink }: { drink: Drink }) {
               <OptionButton
                 key={option}
                 option={option}
-                active={(answers[idx] || []).includes(option)}
+                active={getQuantity(option) > 0}
+                quantity={current.hasQuantity ? getQuantity(option) : 0}
                 display={display}
                 wide={wide}
+                hasQuantity={current.hasQuantity}
                 onClick={() => toggle(option)}
+                onQuantityChange={(newQty) =>
+                  current.hasQuantity && setQuantity(option, newQty)
+                }
               />
             ))}
           </div>
@@ -42,7 +62,7 @@ export default function PollCard({ drink }: { drink: Drink }) {
           />
         </>
       ) : (
-        <ResultsList questions={questions} answers={answers} />
+        <ResultsList drink={drink} questions={questions} answers={answers} />
       )}
     </div>
   );
